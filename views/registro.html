@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Registro</title>
+    <script src="https://kit.fontawesome.com/47a442944c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="/images/logo-mercado-liebre.svg" alt="logo">
+    </div>
+    <div>
+        <input type="text">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    <div>
+        <p class="titular"><i class="fas fa-hand-holding-usd titular"></i>Compra en cuotas y sin tarjeta de crédito<p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#" target="_blank">Ofertas</a></li>
+            <li><a href="#" target="_blank">Tiendas Oficiales</a></li>
+            <li><a href="#" target="_blank">Vender</a></li>
+            <li><a href="#" target="_blank">Ayuda</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="/registro">Creá tu cuenta<i class="far fa-id-card"></i></a></li>
+            <li><a href="#" target="_blank">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="#" target="_blank">Mis compras<i class="fas fa-shopping-basket"></i></a></li>
+        </ul>
+    </nav>  
+        
+    <div class="burger-menu">
+        <i class="fa fa-bars burger"></i>
+    </div>
+
+    <div>
+        <img src="/images/img-home-banner.jpg" alt="banner">
+    </div>
+        
+</header>
+<main>
+    <form>
+
+        <div class="cajita-registro">
+            <label class="etiqueta-registro" for="nombreApellido">Nombre y apellido</label>
+            <input class="register-form" type="text" name="nombreApellido" id="nombreApellido">
+        </div>
+
+        <div class="cajita-registro">
+            <label class="etiqueta-registro" for="user">Nombre de usuario</label>
+            <input class="register-form" type="text" name="user" id="user">
+        </div>
+
+        <div class="cajita-registro">
+            <label class="etiqueta-registro" for="fechaNacimiento">Fecha de nacimiento</label>
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+        </div>
+
+        <div class="cajita-registro">
+            <label class="etiqueta-registro" for="domicilio">Domicilio</label>
+            <input class="register-form" type="text" name="domicilio" id="domicilio">
+        </div>
+
+        <div class="cajita-registro">
+            <label class="etiqueta-registro">Perfil de usuario</label>
+            <label for="comprador"><input type="radio" name="perfil" id="comprador" value="comprador">Comprador</label>
+            <label for="vendedor"><input type="radio" name="perfil" id="vendedor" value="vendedor">Vendedor</label>
+        </div>
+        
+        <div class="cajita-registro">
+            <label class="etiqueta-registro">Interesado en</label>
+            <input type="checkbox" name="interes" id="electro" value="electro">Electro<label for="electro">Electro</label>
+            <input type="checkbox" name="interes" id="moda" value="moda"><label for="moda">Moda</label>
+            <input type="checkbox" name="interes" id="hogar" value="hogar"><label for="hogar">Hogar</label>
+            <input type="checkbox" name="interes" id="jugueteria" value="jugueteria"><label for="jugueteria">Juguetería</label>
+            <input type="checkbox" name="interes" id="vidaSana" value="vidaSana"><label for="vidaSana">Vida sana</label>
+        </div>
+
+        <div class="cajita-registro">
+            <label class="etiqueta-registro" for="fotoPerfil">Foto de perfil</label>
+            <input class="register-form" type="file" name="fotoPerfil" id="fotoPerfil">
+        </div>
+
+        <div class="cajita-registro">
+            <label class="etiqueta-registro" for="password1">Contraseña</label>
+            <input class="register-form" type="password" name="password1" id="password1">
+        </div>
+
+        <div class="cajita-registro">
+            <label class="etiqueta-registro" for="password2">Confirmar contraseña</label>
+            <input class="register-form" type="password" name="password2" id="password2">
+        </div>
+
+        <div class="cajita-registro">
+            <button class="reg-button" type="submit">Enviar</button>
+            <button class="reg-button" type="reset">Borrar</button>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </form>
+</main>
+</body>
+</html>

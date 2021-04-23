@@ -162,7 +162,31 @@ header div {
     margin-left: 10px;
 }
 
-/*Para navegar en tablets*/
+
+
+
+
+/* FORMULARIO DE REGISTRO */
+
+.cajita-registro {
+    padding: 10px;
+    margin: 10px;
+}
+
+.etiqueta-registro {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reg-button {
+    color: aquamarine;
+}
+
+
+
+/* MEDIA QUERY */
+/* Para navegar en tablets */
+
 @media (min-width: 361px) {
     .product-picture{
         box-shadow: 0px 0px 10px rgb(100,100,100);
@@ -178,7 +202,7 @@ header div {
     }
 }
 
-/*Para navegar en desktop*/
+/* Para navegar en desktop */
 @media (min-width: 769px) {
     .product-picture {
         box-shadow: 0px 0px 10px rgb(100,100,100);
