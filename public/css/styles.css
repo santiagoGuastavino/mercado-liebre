@@ -8,8 +8,8 @@ body {
     background-color: #eac926;
     color: #03264C;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    line-height: 19px;
+    /* font-size: 12px;
+    line-height: 19px; */
 }
 
 img {
@@ -28,18 +28,6 @@ a:link {
 a:visited{
     color: #03264C;
     text-decoration: none;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-footer h3 {
-    font-size: 12px;
-}
-
-header h3 {
-    font-size: 18px;
 }
 
 p {
