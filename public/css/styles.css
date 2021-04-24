@@ -66,19 +66,21 @@ a:visited{
 }
 
 .logo {
-    max-width: 50%;
-    max-width: 200px;
+    max-width: 35%;
 }
 
 .search-bar {
-    max-width: 50%;
+    /* max-width: 65%; */
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 
-/* .search-bar input {
-
-} */
+.search-bar input {
+    background-color: #FFF;
+    width: 70%;
+    padding: 10px 0;
+}
 
 /* "compra en cuotas y sin tarjeta de crédito" */
 .welcome-text {
@@ -91,7 +93,6 @@ a:visited{
     display: none;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* align-items: center; */
 }
 
 .main-navbar li {
@@ -211,10 +212,6 @@ a:visited{
     color: #666;
 }
 
-/* .footer-section {
-
-} */
-
 .footer-icon {
     color: #1259c3;
     text-align: center;
@@ -275,9 +272,13 @@ a:visited{
 
 /* Para navegar en tablets */
 @media (min-width: 576px) {
-    .logo, .search-bar, .welcome-text {
-        max-width: 33%;
+    /* .logo, .welcome-text, {
+        width: 33%;
     }
+
+    /* .search-bar {
+        width: 50%;
+    } */
 
     .welcome-text {
         margin: 0;
