@@ -4,39 +4,31 @@
     box-sizing: border-box;
 }
 
+
+/**/
+/* REGLAS GENERALES */
+/**/
+
+
 body {
     color: #03264C;
+    background-color: #ebebeb;
     font-family: 'Roboto', sans-serif;
-}
-
-
-main {
-    width: 100%;
-    margin: auto;
-    background-color:  #ebebeb;
-}
-
-header {
-    background-color: #EAC926;
-}
-
-p {
-    font-size: 16px;
-    line-height: 23px;
 }
 
 img {
     width: 100%
 }
 
-.product-picture {
-    width: 90%;
-    margin: auto;
+p {
+    font-size: 12px;
+    line-height: 19px;
 }
 
-.logo {
-    max-width: 620px;
-    margin: auto;
+/* Estilos de link */
+a {
+    font-size: 12px;
+    line-height: 19px;
 }
 
 a:link {
@@ -53,66 +45,43 @@ a:visited{
     text-decoration: none;
 }
 
-main header {
+
+/**/
+/* HEADER */
+/**/
+
+
+.main-header {
+    width: 100%;
+    margin: auto;
+    background-color: #EAC926;
+}
+
+.logo {
+    max-width: 620px;
+    margin: auto;
+}
+
+/* .search-bar {
+
+} */
+
+/* "compra en cuotas y sin tarjeta de crédito" */
+.welcome-text {
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
+}   
 
-main section {
-    padding-bottom: 10px;
-}
-
-main section article {
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
-    background-color: #ebebeb;
-}
-
-main section article footer {
+.main-navbar, .user-navbar {
     display: none;
+    margin: 0 10px;
 }
 
-.envio {
-    color: #39b54a;
-    border: 1px solid #39b54a;
-    border-radius: 50%;
-    width: 38px;
-    font-size: 14px;
-    padding: 10px;
-}
-
-.ofertas {
-    color: #39b54a;
-}
-
-.ultimo-producto {
-    padding-bottom: 40px;
-}
-
-header nav {
-    padding-top: 15px;
-    margin-left: 10px;
-    display: none;
-}
-
-nav ul{
+.main-navbar ul, .user-navbar ul {
     list-style-type: none;
+    padding: 5px;
 }
 
-header div {
-    padding: 10px;
-}
-
-.precios {
-    font-size: 18px;
-    line-height: 25px;
-}
-
-.titular {
-    text-align: center;
-}
-
+/* el menú hamburguesa */
 .burger-menu {
     text-align: center;
     padding: 10px;
@@ -127,46 +96,125 @@ header div {
     font-size: 20px;
 }
 
+.banner {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.banner img {
+    display: block;
+}
+
+
+/**/
+/* MAIN */
+/**/
+
+
+.main-main {
+    width: 90%;
+    margin: auto;
+    background-color: #ebebeb;
+}
+
+.main-title {
+    color: #666;
+    text-align: left;
+    width: 90%;
+    padding: 20px 0;
+}
+
+.product-product {
+    /* width: 90%;
+    margin: auto; */
+    background-color: #ebebeb;
+    border-top: 1px solid #ebebeb;
+}
+
+.product-picture img {
+    display: block;
+}
+
+
+/* main section article {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    background-color: #ebebeb;
+} */
+
+.product-name {
+    display: none;
+}
+
+.delivery-truck {
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    width: 38px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+
+.ultimo-producto {
+    padding-bottom: 40px;
+}
+
+
+
+/* .price {
+    font-size: 18px;
+    line-height: 25px;
+} */
+
+.discount {
+    color: #39b54a;
+}
+
+
+
+/**/
+/* FOOTER */
+/**/
+
 
 .footer-footer {
     background-color: #ebebeb;
     color: #666;
 }
 
-.footer-footer div {
+.footer-section {
+
+}
+
+.footer-icon {
     color: #1259c3;
     text-align: center;
-    padding-bottom: 10px;
-    font-size: 32px;
+
 }
 
-.footer-footer section {
-    padding-top: 20px;
-    padding-bottom: 40px;   
-}
-
-.footer-footer section header {
+.footer-title {
     text-align: center;
 }
 
-.footer-footer section main {
+.footer-main {
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
     margin: auto;
 }    
 
-.footer-footer footer{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-left: 10px;
+.copyrights {
+
 }
 
 
 
 
 
+
+
+/**/
 /* FORMULARIO DE REGISTRO */
+/**/
 
 .cajita-registro {
     padding: 10px;
@@ -184,36 +232,47 @@ header div {
 
 
 
-/* MEDIA QUERY */
-/* Para navegar en tablets */
 
-@media (min-width: 361px) {
+
+/**/
+/* MEDIA QUERY */
+/**/
+
+
+/* Para navegar en tablets */
+@media (min-width: 576px) {
     .product-picture{
         box-shadow: 0px 0px 10px rgb(100,100,100);
     }
-    .product-description {
+
+    .main-navbar, .user-navbar, .product-description {
         display: block;
     }
-    header nav {
-        display: block;
-    }
+
     .burger-menu {
         display: none;
     }
 }
 
 /* Para navegar en desktop */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .product-picture {
         box-shadow: 0px 0px 10px rgb(100,100,100);
     }
-    .product-description {
+
+    .main-navbar, .user-navbar, .product-description {
         display: block;
     }
-    header nav {
-        display: block;
-    }
+
     .burger-menu {
         display: none;
+    }
+}
+
+/* Para limitar pantallas mayores */
+@media (min-width: 1200px) {
+    .main-header, .main-main {
+        max-width: 1200px;
+        margin: auto;
     }
 }
