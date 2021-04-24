@@ -57,28 +57,47 @@ a:visited{
     background-color: #EAC926;
 }
 
-.logo {
-    max-width: 620px;
-    margin: auto;
+.header-header {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* .search-bar {
+.logo {
+    max-width: 50%;
+    max-width: 200px;
+}
+
+.search-bar {
+    max-width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* .search-bar input {
 
 } */
 
 /* "compra en cuotas y sin tarjeta de crédito" */
 .welcome-text {
     text-align: center;
-}   
-
-.main-navbar, .user-navbar {
-    display: none;
-    margin: 0 10px;
+    margin-top: 20px;
 }
 
-.main-navbar ul, .user-navbar ul {
+/* navbar */
+.main-navbar {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.main-navbar li {
     list-style-type: none;
-    padding: 5px;
+    display: inline-block;
+    margin: 10px 8px;
 }
 
 /* el menú hamburguesa */
@@ -125,7 +144,7 @@ a:visited{
     margin: 20px 0;
 }
 
-.last-seen {
+.product-category {
     display: flex;
     flex-wrap: wrap;
 }
@@ -256,11 +275,23 @@ a:visited{
 
 /* Para navegar en tablets */
 @media (min-width: 576px) {
+    .logo, .search-bar, .welcome-text {
+        max-width: 33%;
+    }
+
+    .welcome-text {
+        margin: 0;
+    }
+    
     .product-picture{
         box-shadow: 0px 0px 10px rgb(100,100,100);
     }
+    
+    .main-navbar {
+        display: flex;
+    }
 
-    .main-navbar, .user-navbar, .product-name {
+    .product-name {
         display: block;
     }
 
@@ -271,6 +302,7 @@ a:visited{
     .product-product {
         width: 50%;
     }
+
 }
 
 /* Para navegar en desktop */
