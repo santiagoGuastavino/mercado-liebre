@@ -69,6 +69,7 @@ a:visited{
 
 .logo {
     max-width: 33%;
+    flex-grow: 0;
 }
 
 .search-bar {
@@ -77,23 +78,23 @@ a:visited{
     justify-content: center;
     max-width: 66%;
     flex-grow: 3;
-    padding-left: 15px;
+    margin: auto;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
 }
 
 .search-bar input {
     background-color: #FFF;
     padding: 8px 0;
     width: 90%;
-    border-style: outset;
-    border-radius: 4px;
+    border: none;
 }
 
 .search-bar button {
     background-color: #FFF;
-    border-style: outset;
-    border-radius: 4px;
-    color: #03264C;
+    color: #666;
     width: 10%;
+    border: none;
+    border-left: solid 1px #666;
 }
 
 /* "compra en cuotas y sin tarjeta de crédito" */
@@ -258,22 +259,49 @@ a:visited{
 /* FORMULARIO DE REGISTRO */
 /**/
 
-.register-text-box {
+
+/**/
+/* márgenes para las cajitas */
+.register-text-box, .register-radio-box, .register-check-box, .register-date-box, .register-file-box {
     margin: 20px 10px;
+}
+
+
+/**/
+/* cajitas div para cada input type="" bien distinto */
+.register-text-box {
     text-align: center;
 }
 
+/* .register-radio-box {
+
+} */
+
+.register-check-box {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* .register-date-box
+
+} */
+
+/* .register-file-box {
+
+} */
+
+
+/**/
+/* etiqueta pre input */
 .register-label {
     display: block;
     margin-bottom: 5px;
     text-align: left;
 }
 
-.register-date-box, .register-file-box {
-    margin: 20px 10px;
-}
 
-
+/**/
+/* reglas para dada input type="" */
 .input-text {
     width: 100%;
 }
@@ -290,10 +318,17 @@ a:visited{
 
 } */
 
+/* .input-file {
+
+} */
+
 .input-password {
     width: 100%;
 }
 
+
+/**/
+/* botones */
 .button-box {
     margin: 20px 10px;
 }
@@ -324,6 +359,10 @@ a:visited{
 
     .search-bar, .welcome-text {
         max-width: 400px;
+    }
+
+    .search-bar {
+        margin: 0 15px;
     }
 
     .welcome-text {

@@ -20,7 +20,7 @@
         </div>
 
         <div class="search-bar"> 
-            <input type="text" placeholder="Buscar productos, marcas">
+            <input type="text" placeholder="Buscar productos, marcas y más...">
             <button><i class="fas fa-search"></i></button>
         </div>
 
@@ -92,7 +92,7 @@
 
         <!-- User tpye -->
         <!-- radio -->
-        <div>
+        <div class="register-radio-box">
             <label class="register-label">Perfil de usuario</label>
             <label for="comprador"><input class="input-radio" type="radio" name="perfil" id="comprador" value="comprador">Comprador</label>
             <label for="vendedor"><input class="input-radio" type="radio" name="perfil" id="vendedor" value="vendedor">Vendedor</label>
@@ -100,20 +100,32 @@
         
         <!-- Interests -->
         <!-- checkbox -->
-        <div>
+        <div class="register-check-box">
             <label class="register-label">Interesado en</label>
-            <input class="input-checkbox" type="checkbox" name="interes" id="electro" value="electro"><label for="electro">Electro</label>
-            <input class="input-checkbox" type="checkbox" name="interes" id="moda" value="moda"><label for="moda">Moda</label>
-            <input class="input-checkbox" type="checkbox" name="interes" id="hogar" value="hogar"><label for="hogar">Hogar</label>
-            <input class="input-checkbox" type="checkbox" name="interes" id="jugueteria" value="jugueteria"><label for="jugueteria">Juguetería</label>
-            <input class="input-checkbox" type="checkbox" name="interes" id="vidaSana" value="vidaSana"><label for="vidaSana">Vida sana</label>
+            <div>
+                <div>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="electro" value="electro"><label for="electro">Electro</label>
+                </div>
+                <div>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="moda" value="moda"><label for="moda">Moda</label>
+                </div>
+                <div>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="hogar" value="hogar"><label for="hogar">Hogar</label>
+                </div>
+                <div>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="jugueteria" value="jugueteria"><label for="jugueteria">Juguetería</label>
+                </div>
+                <div>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="vidaSana" value="vidaSana"><label for="vidaSana">Vida sana</label>
+                </div>
+            </div>
         </div>
 
         <!-- Profile picture -->
         <!-- file -->
         <div class="register-file-box">
             <label class="register-label" for="fotoPerfil">Foto de perfil</label>
-            <input class="input-text" type="file" name="fotoPerfil" id="fotoPerfil">
+            <input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil">
         </div>
 
         <!-- Password -->
