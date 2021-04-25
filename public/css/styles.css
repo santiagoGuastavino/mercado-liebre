@@ -17,7 +17,7 @@ body {
 }
 
 img {
-    width: 100%
+    width: 100%;
 }
 
 p {
@@ -59,33 +59,48 @@ a:visited{
 
 .header-header {
     padding: 30px 0;
+    margin: 0 5px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: wrap;  
+    justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    max-width: 35%;
+    max-width: 33%;
 }
 
 .search-bar {
-    /* max-width: 65%; */
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    max-width: 66%;
+    flex-grow: 3;
+    padding-left: 15px;
 }
 
 .search-bar input {
     background-color: #FFF;
-    width: 70%;
-    padding: 10px 0;
+    padding: 8px 0;
+    width: 90%;
+    border-style: outset;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background-color: #FFF;
+    border-style: outset;
+    border-radius: 4px;
+    color: #03264C;
+    width: 10%;
 }
 
 /* "compra en cuotas y sin tarjeta de crédito" */
 .welcome-text {
     text-align: center;
     margin-top: 20px;
+    width: 100%;
+    align-self: center;
 }
 
 /* navbar */
@@ -238,14 +253,10 @@ a:visited{
 }
 
 
-
-
-
-
-
 /**/
 /* FORMULARIO DE REGISTRO */
 /**/
+
 
 .cajita-registro {
     padding: 10px;
@@ -272,18 +283,26 @@ a:visited{
 
 /* Para navegar en tablets */
 @media (min-width: 576px) {
-    /* .logo, .welcome-text, {
+    .header-header {
+        flex-wrap: nowrap;
+    }
+    
+    .logo, .search-bar, .welcome-text {
         width: 33%;
     }
 
-    /* .search-bar {
-        width: 50%;
-    } */
+    .logo {
+        max-width: 200px;
+    }
+
+    .search-bar, .welcome-text {
+        max-width: 400px;
+    }
 
     .welcome-text {
         margin: 0;
-    }
-    
+    }    
+
     .product-picture{
         box-shadow: 0px 0px 10px rgb(100,100,100);
     }
