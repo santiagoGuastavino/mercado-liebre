@@ -66,57 +66,61 @@
         <!-- text -->
         <div class="register-text-box">
             <label class="register-label" for="nombreApellido">Nombre y apellido</label>
-            <input class="input-text" type="text" name="nombreApellido" id="nombreApellido">
+            <input class="input-text" type="text" name="nombreApellido" id="nombreApellido" placeholder="ej. Juan Pérez" required>
         </div>
 
         <!-- Username -->
         <!-- text -->
         <div class="register-text-box">
             <label class="register-label" for="user">Nombre de usuario</label>
-            <input class="input-text" type="text" name="user" id="user">
+            <input class="input-text" type="text" name="user" id="user" placeholder="username" required>
         </div>
 
         <!-- Birth date -->
         <!-- date -->
         <div class="register-date-box">
             <label class="register-label" for="fechaNacimiento">Fecha de nacimiento</label>
-            <input class="input-date" type="date" name="fechaNacimiento" id="fechaNacimiento">
+            <input class="input-date" type="date" name="fechaNacimiento" id="fechaNacimiento" min="1921-5-25" max="2003-5-25" required>
         </div>
 
         <!-- Adress -->
         <!-- text -->
         <div class="register-text-box">
             <label class="register-label" for="domicilio">Domicilio</label>
-            <input class="input-text" type="text" name="domicilio" id="domicilio">
+            <input class="input-text" type="text" name="domicilio" id="domicilio" placeholder="Ituzaingó 1377, 3ro B" required>
         </div>
 
         <!-- User tpye -->
         <!-- radio -->
         <div class="register-radio-box">
             <label class="register-label">Perfil de usuario</label>
-            <label for="comprador"><input class="input-radio" type="radio" name="perfil" id="comprador" value="comprador">Comprador</label>
-            <label for="vendedor"><input class="input-radio" type="radio" name="perfil" id="vendedor" value="vendedor">Vendedor</label>
+            <div class="user-profile-radio">
+                <input class="input-radio" type="radio" name="perfil" id="comprador" value="comprador" required><label class="option-label" for="comprador">Comprador</label>
+            </div>
+            <div class="user-profile-radio">
+                <input class="input-radio" type="radio" name="perfil" id="vendedor" value="vendedor" required><label class="option-label" for="vendedor">Vendedor</label>
+            </div>
         </div>
         
-        <!-- Interests -->
+        <!-- Interest -->
         <!-- checkbox -->
         <div class="register-check-box">
-            <label class="register-label">Interesado en</label>
-            <div>
+            <label class="register-label">Interesado en:</label>
+            <div class="interest-box">
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="electro" value="electro"><label for="electro">Electro</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="electro" value="electro"><label class="option-label" for="electro">Electro</label>
                 </div>
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="moda" value="moda"><label for="moda">Moda</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="moda" value="moda"><label class="option-label" for="moda">Moda</label>
                 </div>
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="hogar" value="hogar"><label for="hogar">Hogar</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="hogar" value="hogar"><label class="option-label" for="hogar">Hogar</label>
                 </div>
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="jugueteria" value="jugueteria"><label for="jugueteria">Juguetería</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="jugueteria" value="jugueteria"><label class="option-label" for="jugueteria">Juguetería</label>
                 </div>
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="vidaSana" value="vidaSana"><label for="vidaSana">Vida sana</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="vidaSana" value="vidaSana"><label class="option-label" for="vidaSana">Vida sana</label>
                 </div>
             </div>
         </div>
@@ -124,29 +128,28 @@
         <!-- Profile picture -->
         <!-- file -->
         <div class="register-file-box">
-            <label class="register-label" for="fotoPerfil">Foto de perfil</label>
-            <input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil">
+            <label class="register-label" id="file-label" for="fotoPerfil">Añadir foto de perfil<input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil" accept=".jpg, .png"></label>
         </div>
 
         <!-- Password -->
         <!-- password -->
         <div class="register-text-box">
             <label class="register-label" for="password1">Contraseña</label>
-            <input class="input-password" type="password" name="password1" id="password1">
+            <input class="input-password" type="password" name="password1" id="password1" required>
         </div>
 
         <!-- Repeat password -->
         <!-- password -->
         <div class="register-text-box">
             <label class="register-label" for="password2">Confirmar contraseña</label>
-            <input class="input-password" type="password" name="password2" id="password2">
+            <input class="input-password" type="password" name="password2" id="password2" required>
         </div>
 
         <!-- Submit/reset -->
         <!-- buttons -->
         <div class="button-box">
-            <button class="register-button" type="submit">Enviar</button>
-            <button class="register-button" type="reset">Borrar</button>
+            <button class="register-button" id="send" type="submit">Enviar</button>
+            <button class="register-button" id="clear" type="reset">Borrar</button>
         </div>
         
     </form>

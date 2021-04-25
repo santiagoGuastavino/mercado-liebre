@@ -269,73 +269,180 @@ a:visited{
 
 /**/
 /* cajitas div para cada input type="" bien distinto */
+/**/
+
+
+/* cajitas comunes: text, password, etc */
 .register-text-box {
-    text-align: center;
+    text-align: left;
 }
 
-/* .register-radio-box {
+/* input type RADIO cajitas */
+.user-profile-radio {
+    display: inline-block;
+    padding: 5px 0px;
+    margin: 0 15px;
+}
 
-} */
-
-.register-check-box {
+/* input type CHECKBOX cajitas */
+.interest-box {
     display: flex;
     flex-flow: column wrap;
 }
 
-/* .register-date-box
-
-} */
-
-/* .register-file-box {
-
-} */
+.interest-box div {
+    width: 50%;
+    padding: 5px 0;
+    margin: 0 15px;
+}
 
 
 /**/
-/* etiqueta pre input */
+/* etiquetas */
+/**/
+
+
 .register-label {
     display: block;
     margin-bottom: 5px;
     text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+/* etiquetas que acompañan radio y checkbox*/
+.option-label {
+    color: black;
+    cursor: pointer;
+}
+
+/* botón/etiqueta del send file */
+#file-label {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 5px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
+    width: 160px;
+}
+
+#file-label:active {
+    background-color: #1259c3;
+}
+
+/* etiquetas que acompañan a los radio y checkbox */
+.option-label {
+    margin-left: 10px;
 }
 
 
 /**/
 /* reglas para dada input type="" */
-.input-text {
-    width: 100%;
+/**/
+
+
+/* TEXT comunes */
+.input-text, .input-password {
+    width: 160px;
+    border: none;
+    padding: 8px 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
+    transition: width 0.4s ease-in-out;
 }
 
-/* .input-date {
-
-} */
-
-/* .input-radio {
-
-} */
-
-/* .input-checkbox {
-
-} */
-
-/* .input-file {
-
-} */
-
-.input-password {
+.input-text:focus, .input-password:focus {
     width: 100%;
+    outline-color: #1259c3;
+}
+
+/* estilo para el placeholder */
+::-webkit-input-placeholder {
+    font-style: italic;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/**/
+/* un montón de reglas para DATE */
+.input-date {
+    border: none;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
+    padding: 6px 10px;
+}
+
+.input-date:focus {
+    outline-color: #1259c3;
+}
+
+/* con este cambio las barritas */
+::-webkit-datetime-edit-text {
+    color: #666;
+    padding: 2px 2px;
+}
+
+/* con estos tres que siguen, cada campo */
+::-webkit-datetime-edit-month-field { 
+    color: #666;
+}
+
+::-webkit-datetime-edit-day-field { 
+    color: #666;
+}
+
+::-webkit-datetime-edit-year-field {
+    color: #666;
+}
+/**/
+
+/* RADIO Y CHECKBOX */
+.input-radio, .input-checkbox {
+    cursor: pointer;
+}
+
+/* FILE (estilizado en un label) */
+.input-file {
+    display: none;
 }
 
 
 /**/
 /* botones */
 .button-box {
-    margin: 20px 10px;
+    margin: 0 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+
+    /* PARA ALEJAR EL FOOTER */
+    margin-bottom: 200px;
 }
 
-/* .register-button {
+.register-button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 8px 5px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    width: 40%;
+}
 
-} */
+#send {
+    background-color: #1259c3;
+}
+
+#send:hover {
+    background-color: #fff;
+}
+
+#clear:hover {
+    background-color: red;
+}
 
 
 /**/
