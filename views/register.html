@@ -42,7 +42,7 @@
         <nav class="user-navbar">
             <ul>
                 <li><a href="/registro">Creá tu cuenta<i class="far fa-id-card"></i></a></li>
-                <li><a href="#" target="_blank">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="/ingresa">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
                 <li><a href="#" target="_blank">Mis compras<i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>  
@@ -60,40 +60,40 @@
 
 <main class="main-main">
     
-    <form>
+    <form action="/">
 
         <!-- Full name -->
         <!-- text -->
-        <div class="register-text-box">
-            <label class="register-label" for="nombreApellido">Nombre y apellido</label>
+        <div class="input-box">
+            <label class="input-label" for="nombreApellido">Nombre y apellido</label>
             <input class="input-text" type="text" name="nombreApellido" id="nombreApellido" placeholder="ej. Juan Pérez" required>
         </div>
 
         <!-- Username -->
         <!-- text -->
-        <div class="register-text-box">
-            <label class="register-label" for="user">Nombre de usuario</label>
+        <div class="input-box">
+            <label class="input-label" for="user">Nombre de usuario</label>
             <input class="input-text" type="text" name="user" id="user" placeholder="username" required>
         </div>
 
         <!-- Birth date -->
         <!-- date -->
-        <div class="register-date-box">
-            <label class="register-label" for="fechaNacimiento">Fecha de nacimiento</label>
+        <div class="date-box">
+            <label class="input-label" for="fechaNacimiento">Fecha de nacimiento</label>
             <input class="input-date" type="date" name="fechaNacimiento" id="fechaNacimiento" min="1921-5-25" max="2003-5-25" required>
         </div>
 
         <!-- Adress -->
         <!-- text -->
-        <div class="register-text-box">
-            <label class="register-label" for="domicilio">Domicilio</label>
+        <div class="input-box">
+            <label class="input-label" for="domicilio">Domicilio</label>
             <input class="input-text" type="text" name="domicilio" id="domicilio" placeholder="Ituzaingó 1377, 3ro B" required>
         </div>
 
         <!-- User tpye -->
         <!-- radio -->
-        <div class="register-radio-box">
-            <label class="register-label">Perfil de usuario</label>
+        <div class="radio-box">
+            <label class="input-label">Perfil de usuario</label>
             <div class="user-profile-radio">
                 <input class="input-radio" type="radio" name="perfil" id="comprador" value="comprador" required><label class="option-label" for="comprador">Comprador</label>
             </div>
@@ -104,8 +104,8 @@
         
         <!-- Interest -->
         <!-- checkbox -->
-        <div class="register-check-box">
-            <label class="register-label">Interesado en:</label>
+        <div class="check-box">
+            <label class="input-label">Interesado en:</label>
             <div class="interest-box">
                 <div>
                     <input class="input-checkbox" type="checkbox" name="interes" id="electro" value="electro"><label class="option-label" for="electro">Electro</label>
@@ -127,33 +127,33 @@
 
         <!-- Profile picture -->
         <!-- file -->
-        <div class="register-file-box">
-            <label class="register-label" id="file-label" for="fotoPerfil">Añadir foto de perfil<input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil" accept=".jpg, .png"></label>
+        <div class="file-box">
+            <label class="input-label" id="file-label" for="fotoPerfil">Añadir foto de perfil<input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil" accept=".jpg, .png"></label>
         </div>
 
         <!-- Password -->
         <!-- password -->
-        <div class="register-text-box">
-            <label class="register-label" for="password1">Contraseña</label>
-            <input class="input-password" type="password" name="password1" id="password1" required>
+        <div class="input-box">
+            <label class="input-label" for="password1">Contraseña</label>
+            <input class="input-password" type="password" name="password1" id="password1" placeholder="******" required>
         </div>
 
         <!-- Repeat password -->
         <!-- password -->
-        <div class="register-text-box">
-            <label class="register-label" for="password2">Confirmar contraseña</label>
-            <input class="input-password" type="password" name="password2" id="password2" required>
+        <div class="input-box">
+            <label class="input-label" for="password2">Confirmar contraseña</label>
+            <input class="input-password" type="password" name="password2" id="password2" placeholder="******" required>
         </div>
 
         <!-- Submit/reset -->
         <!-- buttons -->
         <div class="button-box">
-            <button class="register-button" id="send" type="submit">Enviar</button>
-            <button class="register-button" id="clear" type="reset">Borrar</button>
+            <button class="form-button" id="send" type="submit">Enviar</button>
+            <button class="form-button" id="clear" type="reset">Borrar</button>
         </div>
         
     </form>
-
+ 
 </main>
 
 <footer class="footer-footer">

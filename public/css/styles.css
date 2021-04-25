@@ -256,35 +256,28 @@ a:visited{
 
 
 /**/
-/* FORMULARIO DE REGISTRO */
+/* FORMULARIO */
 /**/
 
 
 /**/
-/* márgenes para las cajitas */
-.register-text-box, .register-radio-box, .register-check-box, .register-date-box, .register-file-box {
+/* INPUT BOXES */
+/**/
+
+
+/* márgenes: para todas las cajitas */
+.input-box, .radio-box, .check-box, .date-box, .file-box {
     margin: 20px 10px;
 }
 
-
-/**/
-/* cajitas div para cada input type="" bien distinto */
-/**/
-
-
-/* cajitas comunes: text, password, etc */
-.register-text-box {
-    text-align: left;
-}
-
-/* input type RADIO cajitas */
+/* cajita de perfil de usuario */
 .user-profile-radio {
     display: inline-block;
     padding: 5px 0px;
     margin: 0 15px;
 }
 
-/* input type CHECKBOX cajitas */
+/* cajita de intereses de usuario */
 .interest-box {
     display: flex;
     flex-flow: column wrap;
@@ -296,13 +289,21 @@ a:visited{
     margin: 0 15px;
 }
 
+/* cajita para el login */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /**/
-/* etiquetas */
+/* LABEL */
 /**/
 
 
-.register-label {
+.input-label {
     display: block;
     margin-bottom: 5px;
     text-align: left;
@@ -338,11 +339,11 @@ a:visited{
 
 
 /**/
-/* reglas para dada input type="" */
+/* LOS INPUT */
 /**/
 
 
-/* TEXT comunes */
+/* los más comunes, text */
 .input-text, .input-password {
     width: 160px;
     border: none;
@@ -365,7 +366,6 @@ a:visited{
     font-size: 14px;
 }
 
-/**/
 /* un montón de reglas para DATE */
 .input-date {
     border: none;
@@ -395,32 +395,34 @@ a:visited{
 ::-webkit-datetime-edit-year-field {
     color: #666;
 }
-/**/
 
-/* RADIO Y CHECKBOX */
+/* radio y checkbox */
 .input-radio, .input-checkbox {
     cursor: pointer;
 }
 
-/* FILE (estilizado en un label) */
+/* file (estilizado en un label) */
 .input-file {
     display: none;
 }
 
 
 /**/
-/* botones */
+/* BOTONES */
+/**/
+
+
 .button-box {
     margin: 0 10px;
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
 
-    /* PARA ALEJAR EL FOOTER */
+    /* para alejar el footer */
     margin-bottom: 200px;
 }
 
-.register-button {
+.form-button {
     border: none;
     background-color: #fff;
     cursor: pointer;
