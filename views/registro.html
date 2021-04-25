@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML Registro</title>
+    <title>Registro</title>
     <script src="https://kit.fontawesome.com/47a442944c.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
@@ -58,37 +58,38 @@
         
 </header>
 
-<main>
+<main class="main-main">
+    
     <form>
 
         <div class="register-box">
-            <label class="etiqueta-registro" for="nombreApellido">Nombre y apellido</label>
-            <input class="register-form" type="text" name="nombreApellido" id="nombreApellido">
+            <label class="register-label" for="nombreApellido">Nombre y apellido</label>
+            <input class="register-input" type="text" name="nombreApellido" id="nombreApellido">
         </div>
 
         <div class="register-box">
-            <label class="etiqueta-registro" for="user">Nombre de usuario</label>
-            <input class="register-form" type="text" name="user" id="user">
+            <label class="register-label" for="user">Nombre de usuario</label>
+            <input class="register-input" type="text" name="user" id="user">
         </div>
 
         <div class="register-box">
-            <label class="etiqueta-registro" for="fechaNacimiento">Fecha de nacimiento</label>
+            <label class="register-label" for="fechaNacimiento">Fecha de nacimiento</label>
             <input type="date" name="fechaNacimiento" id="fechaNacimiento">
         </div>
 
         <div class="register-box">
-            <label class="etiqueta-registro" for="domicilio">Domicilio</label>
-            <input class="register-form" type="text" name="domicilio" id="domicilio">
+            <label class="register-label" for="domicilio">Domicilio</label>
+            <input class="register-input" type="text" name="domicilio" id="domicilio">
         </div>
 
         <div class="register-box">
-            <label class="etiqueta-registro">Perfil de usuario</label>
+            <label class="register-label">Perfil de usuario</label>
             <label for="comprador"><input type="radio" name="perfil" id="comprador" value="comprador">Comprador</label>
             <label for="vendedor"><input type="radio" name="perfil" id="vendedor" value="vendedor">Vendedor</label>
         </div>
         
         <div class="register-box">
-            <label class="etiqueta-registro">Interesado en</label>
+            <label class="register-label">Interesado en</label>
             <input type="checkbox" name="interes" id="electro" value="electro">Electro<label for="electro">Electro</label>
             <input type="checkbox" name="interes" id="moda" value="moda"><label for="moda">Moda</label>
             <input type="checkbox" name="interes" id="hogar" value="hogar"><label for="hogar">Hogar</label>
@@ -97,34 +98,24 @@
         </div>
 
         <div class="register-box">
-            <label class="etiqueta-registro" for="fotoPerfil">Foto de perfil</label>
-            <input class="register-form" type="file" name="fotoPerfil" id="fotoPerfil">
+            <label class="register-label" for="fotoPerfil">Foto de perfil</label>
+            <input class="register-input" type="file" name="fotoPerfil" id="fotoPerfil">
         </div>
 
         <div class="register-box">
-            <label class="etiqueta-registro" for="password1">Contraseña</label>
-            <input class="register-form" type="password" name="password1" id="password1">
+            <label class="register-label" for="password1">Contraseña</label>
+            <input class="register-input" type="password" name="password1" id="password1">
         </div>
 
         <div class="register-box">
-            <label class="etiqueta-registro" for="password2">Confirmar contraseña</label>
-            <input class="register-form" type="password" name="password2" id="password2">
+            <label class="register-label" for="password2">Confirmar contraseña</label>
+            <input class="register-input" type="password" name="password2" id="password2">
         </div>
 
         <div class="register-box">
             <button class="reg-button" type="submit">Enviar</button>
             <button class="reg-button" type="reset">Borrar</button>
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
     </form>
 

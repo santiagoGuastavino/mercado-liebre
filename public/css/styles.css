@@ -257,21 +257,24 @@ a:visited{
 /* FORMULARIO DE REGISTRO */
 /**/
 
-
-.cajita-registro {
-    padding: 10px;
-    margin: 10px;
+.register-box {
+    margin: 20px 10px;
+    /* text-align: center; */
 }
 
-.etiqueta-registro {
+.register-label {
     display: block;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
-.reg-button {
-    color: aquamarine;
+.register-input {
+    width: 90%;
+    text-align: center;
 }
 
+.register-button {
+
+}
 
 
 
