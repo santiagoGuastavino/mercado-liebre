@@ -19,10 +19,10 @@
             <img src="/images/logo-mercado-liebre.svg" alt="logo">
         </div>
 
-        <div class="search-bar"> 
+        <form class="search-bar">
             <input type="text" placeholder="Buscar productos, marcas y más...">
             <button><i class="fas fa-search"></i></button>
-        </div>
+        </form>
 
         <div class="welcome-text">
             <p><i class="fas fa-hand-holding-usd titular"></i>Compra en cuotas y sin tarjeta de crédito<p>
@@ -62,27 +62,26 @@
 
     <form action="/">
     
-    <div class="login">
+    <div class="login-main-box">
         <!-- Username -->
         <!-- text -->
-        <div class="input-box">
-            <label class="input-label" for="user">Nombre de usuario</label>
-            <input class="input-text" type="text" name="user" id="user" placeholder="username" required>
+        <div class="input-box" id="login-box">
+            <label class="input-label" id="login-label" for="user">Nombre de usuario</label>
+            <input class="input-text" id="login" type="text" name="user" id="user" placeholder="username" required>
         </div>
 
         <!-- Password -->
         <!-- password -->
-        <div class="input-box">
-            <label class="input-label" for="password1">Contraseña</label>
-            <input class="input-password" type="password" name="password1" id="password1" placeholder="******" required>
+        <div class="input-box" id="login-box">
+            <label class="input-label" id="login-label" for="password1">Contraseña</label>
+            <input class="input-password" id="login" type="password" name="password1" id="password1" placeholder="********" required>
         </div>
 
     </div>
 
     
     <div class="button-box">
-        <button class="form-button" id="send" type="submit">Enviar</button>
-        <!-- <button class="form-button" id="clear" type="reset">Borrar</button> -->
+        <button class="form-button" id="send-login" id="login-button" type="submit" width:>Enviar</button>
     </div>
     
     
@@ -94,7 +93,6 @@
 
 
 </main>
-
 
 <footer class="footer-footer">
             
