@@ -380,7 +380,7 @@ a:visited{
     padding: 8px 10px;
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
-    transition: width 1s cubic-bezier(.25,.25,.25,.25)-out;
+    transition: width .5s cubic-bezier(.25,.25,.25,.25);
 }
 
 .input-text:focus, .input-password:focus {
@@ -391,7 +391,7 @@ a:visited{
 /* los input del login */
 #login {
     width: 200px;
-    transition: width 1s cubic-bezier(.25,.25,.25,.25)-out;
+    transition: width .5s cubic-bezier(.25,.25,.25,.25);
 }
 
 #login:focus {
@@ -482,12 +482,12 @@ a:visited{
 #send, #send-login {
     background-color: #1259c3;
     color: #fff;
-    transition: all .5s cubic-bezier(.25,.25,.25,.25)-out;;
+    transition: all .5s cubic-bezier(.25,.25,.25,.25);
 }
 
 /* borrar */
 #clear {
-    transition: all .5s cubic-bezier(.25,.25,.25,.25)-out;
+    transition: all .5s cubic-bezier(.25,.25,.25,.25);
 }
 
 /* botón del login */
