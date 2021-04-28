@@ -16,14 +16,21 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-img {
-    width: 100%;
-}
-
+/* el cliente pidió este tamaño */
 p {
     font-size: 12px;
     line-height: 19px;
 }
+
+/* para problemas con imágenes */
+img {
+    width: 100%;
+}
+
+.product-picture img, 
+.banner img
+{ display: block; }
+
 
 /* Estilos de link */
 a {
@@ -98,7 +105,7 @@ a:visited{
     border-left: solid 1px #666;
 }
 
-/* "compra en cuotas y sin tarjeta de crédito" */
+/* msj: "compra en cuotas y sin tarjeta de crédito" */
 .welcome-text {
     text-align: center;
     margin-top: 20px;
@@ -139,10 +146,6 @@ a:visited{
     padding: 0;
 }
 
-.banner img {
-    display: block;
-}
-
 
 /**/
 /* MAIN */
@@ -153,8 +156,11 @@ a:visited{
     width: 90%;
     margin: auto;
     background-color: #ebebeb;
+    /* para alejar el footer */
+    margin-bottom: 80px;
 }
 
+/* títulos de cada sección */
 .main-title {
     color: #666;
     text-align: left;
@@ -163,20 +169,19 @@ a:visited{
     margin: 20px 0;
 }
 
+/* la gran sección */
 .product-category {
     display: flex;
     flex-wrap: wrap;
 }
 
+/* la caja padre de cada producto */
 .product-product {
-    margin: 10px 0;
-    width: 100%;
+    margin: 10px 5px;
+    width: 95%;
 }
 
-.product-picture img {
-    display: block;
-}
-
+/* caja menor abajo */
 .product-article {
     border-top: 1px solid #ebebeb;
     padding: 15px;
@@ -184,6 +189,7 @@ a:visited{
     background-color: #FFF;
 }
 
+/* camioncito */
 .delivery-truck {
     color: #39b54a;
     display: block;
@@ -199,22 +205,26 @@ a:visited{
     top: -15px;
 }   
 
+/* caja padre de precios */
 .price {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
     align-items: center;
 }
 
+/* precio */
 .full-price {
-    width: 35%;
+    width: 45%
 }
 
+/* % de descuento */
 .discount {
     color: #39b54a;
-    width: 65%;
+    width: 55%;
 }
 
+/* AKA descripción */
 .product-name {
     display: none;
 }
@@ -225,11 +235,18 @@ a:visited{
 /**/
 
 
+/* la gran caja padre footer */
 .footer-footer {
     background-color: #ebebeb;
     color: #666;
 }
 
+/* cada sección principal del footer */
+/* .footer-section {
+
+} */
+
+/* cajita que contiene los íconos */
 .footer-icon {
     color: #1259c3;
     text-align: center;
@@ -238,17 +255,20 @@ a:visited{
     margin-bottom: 10px;
 }
 
+/* título de cada sección */
 .footer-title {
     text-align: center;
     padding: 5px;
 }
 
+/* dentro un <p> que explica la cajita */
 .footer-main {
     text-align: center;
     padding: 5px;
     margin: 0 40px;
 }
 
+/* los derechos inf izq */
 .copyright {
     margin: 0 10px;
     margin-top: 30px;
@@ -359,7 +379,7 @@ a:visited{
     padding: 8px 10px;
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
-    transition: width 0.4s ease-in-out;
+    transition: width 1s ease-in-out;
 }
 
 .input-text:focus, .input-password:focus {
@@ -370,7 +390,7 @@ a:visited{
 /* los input del login */
 #login {
     width: 200px;
-    transition: width 0.4s ease-in-out;
+    transition: width 1s ease-in-out;
 }
 
 #login:focus {
@@ -391,12 +411,14 @@ a:visited{
     border: none;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
     padding: 6px 10px;
+    background-color: #fff;
 }
 
 .input-date:focus {
     outline-color: #1259c3;
 }
 
+/* SOLO FUNCIONAN CON CHROME */
 /* con este cambio las barritas */
 ::-webkit-datetime-edit-text {
     color: #666;
@@ -415,6 +437,7 @@ a:visited{
 ::-webkit-datetime-edit-year-field {
     color: #666;
 }
+/**/
 
 /* radio y checkbox */
 .input-radio, .input-checkbox {
@@ -432,16 +455,15 @@ a:visited{
 /**/
 
 
+/* cajita general de botón */
 .button-box {
     margin: 0 10px;
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
-
-    /* para alejar el footer */
-    margin-bottom: 200px;
 }
 
+/* el botón general */
 .form-button {
     border: none;
     background-color: #fff;
@@ -454,8 +476,17 @@ a:visited{
     width: 40%;
 }
 
-#send {
+/* BOTONES MÁS BIEN ESPECÍFICOS */
+/* send (enviar, aceptar) */
+#send, #send-login {
     background-color: #1259c3;
+    color: #fff;
+    transition: all .5s ease-in-out;;
+}
+
+/* borrar */
+#clear {
+    transition: all .5s ease-in-out;
 }
 
 /* botón del login */
@@ -472,74 +503,122 @@ a:visited{
 
 /* Para navegar en tablets */
 @media (min-width: 576px) {
+    /**/
+    /* HEADER */
+    /**/
+
+    /* no quiero que salte el texto */
     .header-header {
         flex-wrap: nowrap;
     }
     
+    /* los 3 elementos de mi header */
     .logo, .search-bar, .welcome-text {
         width: 33%;
     }
 
+    /* limito logo */
     .logo {
         max-width: 200px;
     }
 
-    .search-bar, .welcome-text {
-        max-width: 400px;
-    }
-
+    /* márgines de barra de búsqueda */
     .search-bar {
-        margin: 0 15px;
+        margin: 0 20px 0 20px;
     }
 
+    /* texto. saco márgenes */
     .welcome-text {
         margin: 0;
-    }    
+    }
+    
 
-    .product-picture{
+    /**/
+    /* MAIN */
+    /**/
+
+    /* if hover: animación sombra a la caja */
+    .product-product:hover {
         box-shadow: 0px 0px 10px rgb(100,100,100);
     }
     
+    /* muestro el navbar */
     .main-navbar {
         display: flex;
     }
 
-    .product-name {
+    /* if hover: muestro descripción del producto */
+    .product-product:hover .product-name {
         display: block;
     }
 
+    /* oculto menú hamburguesa */
     .burger-menu {
         display: none;
     }
 
+    /* muestro 2 productos */
     .product-product {
-        width: 50%;
+        width: 45%;
     }
 
-}
+    /**/
+    /* FORMULARIOS */
+    /**/
 
-/* Para navegar en desktop */
-@media (min-width: 768px) {
-    .product-product {
-        width: 33%;
-    }
-
-    #send:hover {
+    /* if hover: de botón send */
+    #send:hover, #send-login:hover {
+        color: black;
         background-color: #fff;
     }
     
+    /* if hover: de botón borrar */
     #clear:hover {
         background-color: red;
     }
 }
 
+/* Para navegar en desktop */
+@media (min-width: 768px) {
+    /**/
+    /* MAIN */
+    /**/
+
+    /* muestro 3 productos */
+    .product-product {
+        width: 30%;
+    }
+
+    /* aumento el tamaño del mensaje */
+    .welcome-text p {
+        font-size: 14px;
+    }
+}
+
 /* Para limitar pantallas mayores */
 @media (min-width: 992px) {
+    /**/
+    /* limito ancho en general */
     .main-header, .main-main {
         max-width: 992px;
     }
 
-    .product-product {
-        width: 25%;
+    /**/
+    /* HEADER */
+    /**/
+
+    /* aumento el tamaño del mensaje */
+    .welcome-text p {
+        font-size: 16px;
     }
+
+    /**/
+    /* MAIN */
+    /**/
+
+    /* muestro 4 productos */
+    .product-product {
+        width: 23%;
+    }
+
 }
