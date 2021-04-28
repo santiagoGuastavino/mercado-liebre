@@ -203,7 +203,12 @@ a:visited{
     position: absolute;
     right: 20px;
     top: -15px;
-}   
+}
+
+/* instrucciones para animar mi camioncito */
+.delivery-truck i {
+    transition: transform .4s cubic-bezier(.25,.25,.25,.25);
+}
 
 /* caja padre de precios */
 .price {
@@ -241,11 +246,6 @@ a:visited{
     color: #666;
 }
 
-/* cada sección principal del footer */
-/* .footer-section {
-
-} */
-
 /* cajita que contiene los íconos */
 .footer-icon {
     color: #1259c3;
@@ -253,6 +253,7 @@ a:visited{
     font-size: 2em;
     margin-top: 20px;
     margin-bottom: 10px;
+    transition: color .5s cubic-bezier(.25,.25,.25,.25);
 }
 
 /* título de cada sección */
@@ -264,7 +265,7 @@ a:visited{
 /* dentro un <p> que explica la cajita */
 .footer-main {
     text-align: center;
-    padding: 5px;
+    padding: 0 30px;
     margin: 0 40px;
 }
 
@@ -379,7 +380,7 @@ a:visited{
     padding: 8px 10px;
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
-    transition: width 1s ease-in-out;
+    transition: width 1s cubic-bezier(.25,.25,.25,.25)-out;
 }
 
 .input-text:focus, .input-password:focus {
@@ -390,7 +391,7 @@ a:visited{
 /* los input del login */
 #login {
     width: 200px;
-    transition: width 1s ease-in-out;
+    transition: width 1s cubic-bezier(.25,.25,.25,.25)-out;
 }
 
 #login:focus {
@@ -481,12 +482,12 @@ a:visited{
 #send, #send-login {
     background-color: #1259c3;
     color: #fff;
-    transition: all .5s ease-in-out;;
+    transition: all .5s cubic-bezier(.25,.25,.25,.25)-out;;
 }
 
 /* borrar */
 #clear {
-    transition: all .5s ease-in-out;
+    transition: all .5s cubic-bezier(.25,.25,.25,.25)-out;
 }
 
 /* botón del login */
@@ -507,7 +508,8 @@ a:visited{
     /* HEADER */
     /**/
 
-    /* no quiero que salte el texto */
+
+    /* no quiero que salte el welcome-text */
     .header-header {
         flex-wrap: nowrap;
     }
@@ -522,24 +524,14 @@ a:visited{
         max-width: 200px;
     }
 
-    /* márgines de barra de búsqueda */
+    /* márgenes de barra de búsqueda */
     .search-bar {
         margin: 0 20px 0 20px;
     }
 
-    /* texto. saco márgenes */
+    /* texto welcome-text saco márgenes */
     .welcome-text {
         margin: 0;
-    }
-    
-
-    /**/
-    /* MAIN */
-    /**/
-
-    /* if hover: animación sombra a la caja */
-    .product-product:hover {
-        box-shadow: 0px 0px 10px rgb(100,100,100);
     }
     
     /* muestro el navbar */
@@ -547,24 +539,57 @@ a:visited{
         display: flex;
     }
 
-    /* if hover: muestro descripción del producto */
-    .product-product:hover .product-name {
-        display: block;
-    }
-
     /* oculto menú hamburguesa */
     .burger-menu {
         display: none;
     }
 
+
+    /**/
+    /* MAIN */
+    /**/
+
+    
     /* muestro 2 productos */
     .product-product {
         width: 45%;
     }
 
+    /* if hover: animo sombra a la caja */
+    .product-product:hover {
+        box-shadow: 0px 0px 10px rgb(100,100,100);
+    }
+
+    /* if hover: animo el camioncito */
+    .product-product:hover .delivery-truck i {
+        transform: rotate(-360deg);
+    }
+
+    /* if hover: muestro descripción del producto */
+    .product-product:hover .product-name {
+        display: block;
+    }
+
+
+    /**/
+    /* FOOTER */
+    /**/
+    
+
+    /* if hover: cambio color ícono footer */
+    .footer-icon:hover {
+        color: #C37C12;
+    }
+
+    .footer-main {
+        padding: 0 50px;
+    }
+
+
     /**/
     /* FORMULARIOS */
     /**/
+
 
     /* if hover: de botón send */
     #send:hover, #send-login:hover {
@@ -577,6 +602,7 @@ a:visited{
         background-color: red;
     }
 }
+
 
 /* Para navegar en desktop */
 @media (min-width: 768px) {
@@ -593,32 +619,61 @@ a:visited{
     .welcome-text p {
         font-size: 14px;
     }
+
+
+    /**/
+    /* FOOTER */
+    /**/
+
+    .footer-footer {
+        margin:auto;
+    }
+
+    .footer-box {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-section {
+        width: 30%;
+    }
+
+    .footer-main {
+        padding: 0;
+    }
 }
+
 
 /* Para limitar pantallas mayores */
 @media (min-width: 992px) {
     /**/
     /* limito ancho en general */
-    .main-header, .main-main {
+    .main-header, .main-main, .footer-footer {
         max-width: 992px;
     }
+
 
     /**/
     /* HEADER */
     /**/
+
 
     /* aumento el tamaño del mensaje */
     .welcome-text p {
         font-size: 16px;
     }
 
+
     /**/
     /* MAIN */
     /**/
+
 
     /* muestro 4 productos */
     .product-product {
         width: 23%;
     }
-
 }
