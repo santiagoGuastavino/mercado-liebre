@@ -67,6 +67,7 @@
         <div class="input-box">
             <label class="input-label" for="nombreApellido">Nombre y apellido</label>
             <input class="input-text" type="text" name="nombreApellido" id="nombreApellido" placeholder="ej. Juan Pérez" required>
+            <span class="error">Por favor ingrese su nombre completo</span>
         </div>
 
         <!-- Username -->
@@ -74,6 +75,7 @@
         <div class="input-box">
             <label class="input-label" for="user">Nombre de usuario</label>
             <input class="input-text" type="text" name="user" id="user" placeholder="username" required>
+            <span class="error">Éste nombre de usuario ya se encuentra en uso</span>
         </div>
 
         <!-- Birth date -->
@@ -81,6 +83,7 @@
         <div class="date-box">
             <label class="input-label" for="fechaNacimiento">Fecha de nacimiento</label>
             <input class="input-date" type="date" name="fechaNacimiento" id="fechaNacimiento" min="1921-5-25" max="2003-5-25" required>
+            <span class="error">Fecha de nacimiento inválida</span>
         </div>
 
         <!-- Adress -->
@@ -88,6 +91,7 @@
         <div class="input-box">
             <label class="input-label" for="domicilio">Domicilio</label>
             <input class="input-text" type="text" name="domicilio" id="domicilio" placeholder="Ituzaingó 1377, 3ro B" required>
+            <span class="error">Por favor ingrese su domicilio</span>
         </div>
 
         <!-- User tpye -->
@@ -100,6 +104,7 @@
             <div class="user-profile-radio">
                 <input class="input-radio" type="radio" name="perfil" id="vendedor" value="vendedor" required><label class="option-label" for="vendedor">Vendedor</label>
             </div>
+            <span class="error" id="radio">Seleccione una opción</span>
         </div>
         
         <!-- Interest -->
@@ -129,6 +134,7 @@
         <!-- file -->
         <div class="file-box">
             <label class="input-label" id="file-label" for="fotoPerfil">Añadir foto de perfil<input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil" accept=".jpg, .png"></label>
+            <span class="error">Debe seleccionar una imágen</span>
         </div>
 
         <!-- Password -->
@@ -136,6 +142,7 @@
         <div class="input-box">
             <label class="input-label" for="password1">Contraseña</label>
             <input class="input-password" type="password" name="password1" id="password1" placeholder="********" required>
+            <span class="error">Debe incluir al menos un número y un caracter especial</span>
         </div>
 
         <!-- Repeat password -->
@@ -143,6 +150,7 @@
         <div class="input-box">
             <label class="input-label" for="password2">Confirmar contraseña</label>
             <input class="input-password" type="password" name="password2" id="password2" placeholder="********" required>
+            <span class="error">Las contraseñas no coinciden</span>
         </div>
 
         <!-- Submit/reset -->
