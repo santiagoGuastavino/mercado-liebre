@@ -5,4 +5,4 @@
 - It has no functionality as of yet.  
 - I had a lot of fun writing it's code and I'm proud of the results.  
 - I think I might like front end a bit too much.  
-- Looking forward to make it operative with some back end.  
+- I'm looking forward to make it operative with some back end.  
