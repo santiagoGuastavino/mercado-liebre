@@ -6,3 +6,4 @@
 - I had a lot of fun writing it's code and I'm proud of the results.  
 - I think I might like front end a bit too much.  
 - I'm looking forward to make it operative with some back end.  
+- I've recently added MVC structure. So far so good.
