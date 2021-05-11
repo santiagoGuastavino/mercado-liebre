@@ -1,0 +1,40 @@
+<%- include('./partials/head') %>
+
+<body>
+
+<%- include('./partials/header') %>
+
+<main class="main-main">
+    <form action="/">
+    
+        <div class="login-main-box">
+            <!-- Username -->
+            <!-- text -->
+            <div class="input-box" id="login-box">
+                <label class="input-label" id="login-label" for="user">Nombre de usuario</label>
+                <input class="input-text" id="login" type="text" name="user" id="user" placeholder="username" required>
+                <!-- <span class="error">Por favor ingrese su usuario</span> -->
+            </div>
+
+            <!-- Password -->
+            <!-- password -->
+            <div class="input-box" id="login-box">
+                <label class="input-label" id="login-label" for="password1">Contraseña</label>
+                <input class="input-password" id="login" type="password" name="password1" id="password1" placeholder="********" required>
+                <!-- <span class="error">Por favor ingrese su contraseña</span> -->
+            </div>
+        </div>
+
+        <!-- Submit -->
+        <!-- buttons -->
+        <div class="button-box">
+            <button class="form-button" id="send-login" id="login-button" type="submit" width:>Enviar</button>
+        </div>
+    
+    </form>
+</main>
+
+<%- include('./partials/footer') %>
+
+</body>
+</html>

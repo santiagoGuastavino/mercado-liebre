@@ -1,0 +1,27 @@
+<%- include('./partials/head') %>
+
+<body>
+
+<%- include('./partials/header') %>
+
+<main class="main-main">
+    <ul>
+        <% for (i = 0 ; i < users.length ; i++) { %>
+            <li>
+                <%= users[i] %>
+            </li>
+        <% } %>
+    </ul>
+    <ul>
+        <% for (i = 0 ; i < countries.length ; i++) { %>
+            <li>
+                <%= countries[i] %>
+            </li>
+        <% } %>
+    </ul>
+</main>
+
+<%- include('./partials/footer') %>
+    
+</body>
+</html>

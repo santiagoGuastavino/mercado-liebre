@@ -1,12 +1,13 @@
-const express = require('express');
-const app = express();
-const path = require('path');
+let express = require('express');
+let app = express();
+let path = require('path');
 
-const mainRouter = require('./routes/main');
-const userRouter = require('./routes/user');
+let mainRouter = require('./routes/main');
+let userRouter = require('./routes/user');
 
-const pathPublic = path.resolve('public');
+let pathPublic = path.resolve('public');
 app.use(express.static(pathPublic));
+app.set('view engine','ejs');
 
 app.use('/', mainRouter);
 app.use('/user', userRouter);

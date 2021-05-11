@@ -1,11 +1,33 @@
-const path = require('path');
+let path = require('path');
 
-const pathLogin = path.resolve(__dirname,'../views/users/login.html');
-const pathRegister = path.resolve(__dirname,'../views/users/register.html');
+let users = [
+    'Juan',
+    'Pedro',
+    'Darío',
+    'Santiago',
+    'José',
+    'Simón',
+    'Alan'
+];
+
+let countries = [
+    'Argentina',
+    'Brasil',
+    'Colombia',
+    'Ecuador',
+    'Uruguay',
+    'Chile',
+    'Bolivia',
+    'Perú',
+    'Paraguay'
+];
 
 let userController = {
-    login: (req,res) => res.sendFile(pathLogin),
-    register: (req,res) => res.sendFile(pathRegister)
+    login: (req,res) => res.render('./users/login'),
+    register: (req,res) => res.render('./users/register'),
+    list: function (req,res) {
+        res.render('./users/user-list',{'users':users,'countries':countries});
+    }
 };
 
 module.exports = userController;

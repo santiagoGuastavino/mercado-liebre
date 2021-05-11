@@ -453,9 +453,13 @@ a:visited{
 
 
 /**/
-/* SPAN (error de validación) */
+/* SPAN */
 /**/
 
+
+.pastime {
+    font-style: italic;
+}
 
 .error {
     display: block;
