@@ -27,7 +27,7 @@ let userController = {
     register: (req,res) => res.render('./users/register'),
     list: function (req,res) {
         res.render('./users/user-list',{'users':users,'countries':countries});
-    }
+    },
 };
 
 module.exports = userController;
