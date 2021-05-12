@@ -1,5 +1,3 @@
-let path = require('path');
-
 let users = [
     'Juan',
     'Pedro',
@@ -26,7 +24,7 @@ let userController = {
     login: (req,res) => res.render('./users/login'),
     register: (req,res) => res.render('./users/register'),
     list: function (req,res) {
-        res.render('./users/user-list',{'users':users,'countries':countries});
+        res.render('./users/list',{'users':users,'countries':countries});
     },
 };
 
