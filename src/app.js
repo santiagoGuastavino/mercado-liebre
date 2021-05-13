@@ -1,8 +1,10 @@
 let express = require('express');
 let app = express();
+let path = require('path');
+
 let mainRouter = require('./routes/main');
 let userRouter = require('./routes/user');
-let path = require('path');
+let productRouter = require('./routes/product');
 
 let pathPublic = path.resolve('public');
 app.use(express.static(pathPublic));
@@ -12,6 +14,7 @@ let viewsPath = path.resolve('./src/views')
 app.set('views', viewsPath)
 
 app.use('/', mainRouter);
-app.use('/user', userRouter);
+app.use('/', userRouter);
+app.use('/product', productRouter);
 
 app.listen(process.env.PORT || 3001, () => console.log('Server running: 3001'));
