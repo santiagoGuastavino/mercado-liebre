@@ -14,5 +14,4 @@ app.set('views', viewsPath)
 app.use('/', mainRouter);
 app.use('/user', userRouter);
 
-// Heroku
 app.listen(process.env.PORT || 3001, () => console.log('Server running: 3001'));
