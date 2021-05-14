@@ -84,17 +84,6 @@
             </div>
         </div>
 
-        <!-- Pastimes -->
-        <!-- text -->
-        <div class="input-box">
-            <label class="input-label">Introduzca algún interes particular</label>
-            <span class="pastime">Máximo 4</span>
-            <% for (i=1 ; i <= 4 ; i++) { %>
-                <label for="">Interés <%= i %></label>
-                <input class="input-text" type="text" name="pastime[]">
-            <% } %>
-        </div>
-
         <!-- Profile picture -->
         <!-- file -->
         <div class="file-box">
@@ -130,6 +119,3 @@
 </main>
 
 <%- include('../partials/footer') %>
-
-</body>
-</html>

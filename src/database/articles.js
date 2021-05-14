@@ -12,7 +12,7 @@ let articles = [
         img: '/img/img-macbook-pro-2019.jpg',
         price: '$230.000',
         inOffer: false,
-        discount: '20%',
+        discount: null,
         relevant: true
     },
     {
@@ -28,7 +28,7 @@ let articles = [
         img: '/img/img-tv-samsung-smart.jpg',
         price: '$24.200',
         inOffer: false,
-        discount: '5%',
+        discount: null,
         relevant: false
     }
 ];

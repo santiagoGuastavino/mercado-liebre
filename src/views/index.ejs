@@ -11,9 +11,11 @@
     </header>
     
     <section class="product-category">
+
+        <% for (i = 0 ; i < relevantList.length ; i++) { %>
         <section class="product-product">
             <div class="product-picture">
-                <img src="/img/img-cafetera-moulinex.jpg" alt="cafetera">
+                <img src="<%= relevantList.img %>">
             </div>
             <article class="product-article">
                 <div class="delivery-truck">
@@ -21,19 +23,23 @@
                 </div>
                 <div class="price">
                     <div class="full-price">
-                        <h3>$6.770</h3>
+                        <h3><%= relevantList.price %></h3>
                     </div>
                     <div class="discount">
-                        <h4>40% OFF</h4>
+                        <% if (relevantList.discount != null) { %>
+                        <h4><%= relevantList.discount %> OFF</h4>
+                        <% } %>
                     </div>
                 </div>
                 <footer class="product-name">
-                    <h4>Cafetera Moulinex</h4>
+                    <h4><%= relevantList.name %></h4>
                 </footer>
             </article>
         </section>
+        <% } %>
+
                 
-        <section class="product-product">
+        <!-- <section class="product-product">
             <div class="product-picture">
                 <img src="/img/img-macbook-pro-2019.jpg" alt="macbook">
             </div>
@@ -97,7 +103,8 @@
                     <h4>SmartTv Samsung 43"</h4>
                 </footer>
             </article>
-        </section>
+        </section> -->
+
     </section>
             
     <header class="main-title">
@@ -105,6 +112,7 @@
     </header>
     
     <section class="product-category">
+        
         <section class="product-product">
             <div class="product-picture">
                 <img src="/img/img-cafetera-moulinex.jpg" alt="cafetera">
@@ -192,10 +200,8 @@
                 </footer>
             </article>
         </section>
+
     </section>
 </main>
 
 <%- include('./partials/footer') %>
-
-</body>
-</html>
