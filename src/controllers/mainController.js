@@ -1,6 +1,8 @@
 let articles = require('../database/articles');
 
 let mainController = {
+    articles,
+    
     renderHome: (req,res) => {
         let title = 'Mercado Liebre';
         let relevantList = [];
@@ -15,7 +17,7 @@ let mainController = {
                 inOfferList.push(articles[i]);
             };
         };
-        res.render('index',{'title':title,'relevantList':relevantList,'inOfferList':inOfferList});
+        res.render('index',{'title':title,'articles':articles,'relevantList':relevantList,'inOfferList':inOfferList});
     },
 }
 

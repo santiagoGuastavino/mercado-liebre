@@ -25,12 +25,8 @@ p {
 /* para problemas con imágenes */
 img {
     width: 100%;
+    display: block;
 }
-
-.product-picture img, 
-.banner img
-{ display: block; }
-
 
 /* Estilos de link */
 a {
@@ -179,6 +175,10 @@ a:visited{
 .product-product {
     margin: 10px 5px;
     width: 95%;
+}
+
+.product-picture img {
+    aspect-ratio: 1 / 1;
 }
 
 /* caja menor abajo */

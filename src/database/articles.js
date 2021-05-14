@@ -30,6 +30,22 @@ let articles = [
         inOffer: false,
         discount: null,
         relevant: false
+    },
+    {
+        name: 'Cámara Pentax',
+        img: 'https://images.pexels.com/photos/821651/pexels-photo-821651.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+        price: '$120.000',
+        inOffer: true,
+        discount: '%5',
+        relevant: true
+    },
+    {
+        name: 'Maquillaje profesional',
+        img: 'https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        price: '$50',
+        inOffer: false,
+        discount: null,
+        relevant: true
     }
 ];
 

@@ -15,7 +15,7 @@
         <% for (i = 0 ; i < relevantList.length ; i++) { %>
         <section class="product-product">
             <div class="product-picture">
-                <img src="<%= relevantList.img %>">
+                <img src="<%= relevantList[i].img %>">
             </div>
             <article class="product-article">
                 <div class="delivery-truck">
@@ -23,87 +23,20 @@
                 </div>
                 <div class="price">
                     <div class="full-price">
-                        <h3><%= relevantList.price %></h3>
+                        <h3><%= relevantList[i].price %></h3>
                     </div>
                     <div class="discount">
-                        <% if (relevantList.discount != null) { %>
-                        <h4><%= relevantList.discount %> OFF</h4>
+                        <% if (relevantList[i].discount != null) { %>
+                        <h4><%= relevantList[i].discount %> OFF</h4>
                         <% } %>
                     </div>
                 </div>
                 <footer class="product-name">
-                    <h4><%= relevantList.name %></h4>
+                    <h4><%= relevantList[i].name %></h4>
                 </footer>
             </article>
         </section>
         <% } %>
-
-                
-        <!-- <section class="product-product">
-            <div class="product-picture">
-                <img src="/img/img-macbook-pro-2019.jpg" alt="macbook">
-            </div>
-            <article class="product-article">
-                <div class="delivery-truck">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="price">
-                    <div class="full-price">
-                        <h3>$230.000</h3>
-                    </div>
-                    <div class="discount">
-                        <h4>20% OFF</h4>
-                    </div>
-                </div>
-                <footer class="product-name">
-                    <h4>MacBook Pro 2019</h4>
-                </footer>
-            </article>
-        </section>
-        
-        <section class="product-product">
-            <div class="product-picture">
-                <img src="/img/img-samsung-galaxy-s10.jpg" alt="samsung galaxy">
-            </div>
-            <article class="product-article">
-                <div class="delivery-truck">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="price">
-                    <div class="full-price">
-                        <h3>$70.500</h3>
-                    </div>
-                    <div class="discount">
-                        <h4>10% OFF</h4>
-                    </div>
-                </div>
-                <footer class="product-name">
-                    <h4>Samsung Galaxy S10</h4>
-                </footer>
-            </article>
-        </section>
-                    
-        <section class="product-product">
-            <div class="product-picture">
-                <img src="/img/img-tv-samsung-smart.jpg" alt="smart tv">
-            </div>
-            <article class="product-article">
-                <div class="delivery-truck">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="price">
-                    <div class="full-price">
-                        <h3>$24.200</h3>
-                    </div>
-                    <div class="discount">
-                        <h4>5% OFF</h4>
-                    </div>
-                </div>
-                <footer class="product-name">
-                    <h4>SmartTv Samsung 43"</h4>
-                </footer>
-            </article>
-        </section> -->
 
     </section>
             
@@ -113,9 +46,10 @@
     
     <section class="product-category">
         
+        <% for (i = 0 ; i < inOfferList.length ; i++) { %>
         <section class="product-product">
             <div class="product-picture">
-                <img src="/img/img-cafetera-moulinex.jpg" alt="cafetera">
+                <img src="<%= inOfferList[i].img %>">
             </div>
             <article class="product-article">
                 <div class="delivery-truck">
@@ -123,21 +57,31 @@
                 </div>
                 <div class="price">
                     <div class="full-price">
-                        <h3>$6.770</h3>
+                        <h3><%= inOfferList[i].price %></h3>
                     </div>
                     <div class="discount">
-                        <h4>40% OFF</h4>
+                        <h4><%= inOfferList[i].discount %> OFF</h4>
                     </div>
                 </div>
                 <footer class="product-name">
-                    <h4>Cafetera Moulinex</h4>
+                    <h4><%= inOfferList.name %></h4>
                 </footer>
             </article>
         </section>
+        <% } %>
     
+    </section>
+
+    <header class="main-title">
+        <h2>Todos los artículos</h2>
+    </header>
+
+    <section class="product-category">
+
+        <% for (i = 0 ; i < articles.length ; i++) { %>
         <section class="product-product">
             <div class="product-picture">
-                <img src="/img/img-macbook-pro-2019.jpg" alt="macbook">
+                <img src="<%= articles[i].img %>">
             </div>
             <article class="product-article">
                 <div class="delivery-truck">
@@ -145,63 +89,23 @@
                 </div>
                 <div class="price">
                     <div class="full-price">
-                        <h3>$230.000</h3>
+                        <h3><%= articles[i].price %></h3>
                     </div>
                     <div class="discount">
-                        <h4>20% OFF</h4>
+                        <% if (articles[i].discount != null) { %>
+                        <h4><%= articles[i].discount %> OFF</h4>
+                        <% } %>
                     </div>
                 </div>
                 <footer class="product-name">
-                    <h4>MacBook Pro 2019</h4>
+                    <h4><%= articles[i].name %></h4>
                 </footer>
             </article>
         </section>
-    
-        <section class="product-product">
-            <div class="product-picture">
-                <img src="/img/img-samsung-galaxy-s10.jpg" alt="samsung galaxy">
-            </div>
-            <article class="product-article">
-                <div class="delivery-truck">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="price">
-                    <div class="full-price">
-                        <h3>$70.500</h3>
-                    </div>
-                    <div class="discount">
-                        <h4>10% OFF</h4>
-                    </div>
-                </div>
-                <footer class="product-name">
-                    <h4>Samsung Galaxy S10</h4>
-                </footer>
-            </article>
-        </section>
-    
-        <section class="product-product">
-            <div class="product-picture">
-                <img src="/img/img-tv-samsung-smart.jpg" alt="smart tv">
-            </div>
-            <article class="product-article">
-                <div class="delivery-truck">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="price">
-                    <div class="full-price">
-                        <h3>$24.200</h3>
-                    </div>
-                    <div class="discount">
-                        <h4>5% OFF</h4>
-                    </div>
-                </div>
-                <footer class="product-name">
-                    <h4>SmartTv Samsung 43"</h4>
-                </footer>
-            </article>
-        </section>
+        <% } %>
 
     </section>
+
 </main>
 
 <%- include('./partials/footer') %>
