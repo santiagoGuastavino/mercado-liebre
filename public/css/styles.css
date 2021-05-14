@@ -669,8 +669,13 @@ a:visited{
 @media (min-width: 992px) {
     /**/
     /* limito ancho en general */
-    .main-header, .main-main, .footer-footer {
+    .main-main, .footer-footer {
+        max-width: 1200px;
+    }
+
+    .header-header, .main-navbar {
         max-width: 992px;
+        margin: auto;
     }
 
 
