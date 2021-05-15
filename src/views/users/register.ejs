@@ -11,16 +11,16 @@
         <!-- Full name -->
         <!-- text -->
         <div class="input-box">
-            <label class="input-label" for="nombreApellido">Nombre y apellido</label>
-            <input class="input-text" type="text" name="nombreApellido" id="nombreApellido" placeholder="ej. Juan Pérez" required>
+            <label class="input-label" for="fullName">Nombre y apellido</label>
+            <input class="input-text" type="text" name="fullName" id="fullName" placeholder="ej. Juan Pérez" required>
             <!-- <span class="error">Por favor ingrese su nombre completo</span> -->
         </div>
 
         <!-- Username -->
         <!-- text -->
         <div class="input-box">
-            <label class="input-label" for="user">Nombre de usuario</label>
-            <input class="input-text" type="text" name="user" id="user" placeholder="username" required>
+            <label class="input-label" for="userName">Nombre de usuario</label>
+            <input class="input-text" type="text" name="userName" id="userName" placeholder="username" required>
             <!-- <span class="error">Éste nombre de usuario ya se encuentra en uso</span> -->
         </div>
 
@@ -35,16 +35,48 @@
         <!-- Birth date -->
         <!-- date -->
         <div class="date-box">
-            <label class="input-label" for="fechaNacimiento">Fecha de nacimiento</label>
-            <input class="input-date" type="date" name="fechaNacimiento" id="fechaNacimiento" min="1921-5-25" max="2003-5-25" required>
+            <label class="input-label" for="birthDate">Fecha de nacimiento</label>
+            <input class="input-date" type="date" name="birthDate" id="birthDate" min="1921-5-25" max="2003-5-25" required>
             <!-- <span class="error">Fecha de nacimiento inválida</span> -->
         </div>
 
         <!-- Adress -->
         <!-- text -->
         <div class="input-box">
-            <label class="input-label" for="domicilio">Domicilio</label>
-            <input class="input-text" type="text" name="domicilio" id="domicilio" placeholder="Ituzaingó 1377, 3ro B" required>
+            <label class="input-label" for="adress">Domicilio</label>
+            <div class="location-selectors">
+                <div class="location-select">
+                    <label class="input-label" for="country">País</label>
+                    <select name="country" id="country">
+                        <option value="" disabled selected>Selccione país</option>
+                        <%# for (i = 0 ; i < continents.length ; i++) { %>
+                            <optgroup label="<%#= continents[i].name">
+
+                            </optgroup>
+                        <%# } %>
+                    </select>
+                </div>
+                <div class="location-select">
+                    <label class="input-label" for="">Provincia</label>
+                    <select name="" id="">
+
+                    </select>
+                </div>
+                <div class="location-select">
+                    <label class="input-label" for="">Ciudad</label>
+                    <select name="" id="">
+
+                    </select>
+                </div>
+
+
+
+
+            </div>
+                
+
+
+            <input class="input-text" type="text" name="adress" id="adress" placeholder="Ituzaingó 1377, 3ro B" required>
             <!-- <span class="error">Por favor ingrese su domicilio</span> -->
         </div>
 
