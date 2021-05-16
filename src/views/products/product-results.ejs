@@ -1,0 +1,41 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<main class="main-main">
+
+    <header class="main-title">
+        <h2>Resultados</h2>
+    </header>
+
+    <section class="product-category">
+
+        <% for (i = 0 ; i < searchResults.length ; i++) { %>
+        <section class="product-product">
+            <div class="product-picture">
+                <img src="<%= searchResults[i].img %>">
+            </div>
+            <article class="product-article">
+                <div class="delivery-truck">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="price">
+                    <div class="full-price">
+                        <h3><%= searchResults[i].price %></h3>
+                    </div>
+                    <div class="discount">
+                        <% if (searchResults[i].discount != null) { %>
+                        <h4><%= searchResults[i].discount %> OFF</h4>
+                        <% } %>
+                    </div>
+                </div>
+                <footer class="product-name">
+                    <h4><%= searchResults[i].name %></h4>
+                </footer>
+            </article>
+        </section>
+        <% } %>
+        
+    </section>
+</main>
+
+<%- include('../partials/footer') %>
