@@ -12,6 +12,9 @@ app.set('view engine','ejs');
 let viewsPath = path.resolve('./src/views')
 app.set('views', viewsPath)
 
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
 app.use('/', mainRouter);
 app.use('/', userRouter);
 
