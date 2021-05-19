@@ -12,7 +12,8 @@ let userController = {
                 fullName: req.body.fullName,
                 userName: req.body.userName
             };
-        res.redirect('/');
+        res.send(user)
+        // res.redirect('/');
     }
 };
 
