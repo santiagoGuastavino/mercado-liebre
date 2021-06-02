@@ -9,26 +9,21 @@ let helper = {
         let data = JSON.parse(dataFile);
         return data;
     },
-    writeJson: (data) => {
-        let dataFile = 
+
+    writeJson: (jsonName,data) => {
         dataFile = JSON.stringify(data, null, 2);
-        fs.writeFileSync(dataPath + '/' + jsonFile + '.json', dataFile);
+        fs.writeFileSync(dataPath + '/' + jsonName + '.json', dataFile);
+    },
+
+    lastId: (data) => {
+        let last = 0;
+        data.forEach(item => {
+            if (last < item.id) {
+                last = item.id + 1;
+            };
+        });
+        return last;
     }
-}
+};
 
 module.exports = helper;
-
-let lala = [
-    {
-        one: 'one',
-        two: 'two',
-        three: 'three'
-    },
-    {
-        uno: 'uno',
-        dos: 'dos',
-        tres: 'tres',
-    }
-];
-
-helper.writeJson('lalaOne',lala);
