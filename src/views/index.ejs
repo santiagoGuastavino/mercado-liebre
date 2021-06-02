@@ -12,32 +12,6 @@
     
     <section class="product-category">
 
-        <% for (i = 0 ; i < relevantList.length ; i++) { %>
-        <section class="product-product">
-            <div class="product-picture">
-                <img src="<%= relevantList[i].img %>">
-            </div>
-            <article class="product-article">
-                <div class="delivery-truck">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="price">
-                    <div class="full-price">
-                        <h3><%= relevantList[i].price %></h3>
-                    </div>
-                    <div class="discount">
-                        <% if (relevantList[i].discount != null) { %>
-                        <h4><%= relevantList[i].discount %> OFF</h4>
-                        <% } %>
-                    </div>
-                </div>
-                <footer class="product-name">
-                    <h4><%= relevantList[i].name %></h4>
-                </footer>
-            </article>
-        </section>
-        <% } %>
-
     </section>
             
     <header class="main-title">
@@ -45,65 +19,7 @@
     </header>
     
     <section class="product-category">
-        
-        <% for (i = 0 ; i < inOfferList.length ; i++) { %>
-        <section class="product-product">
-            <div class="product-picture">
-                <img src="<%= inOfferList[i].img %>">
-            </div>
-            <article class="product-article">
-                <div class="delivery-truck">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="price">
-                    <div class="full-price">
-                        <h3><%= inOfferList[i].price %></h3>
-                    </div>
-                    <div class="discount">
-                        <h4><%= inOfferList[i].discount %> OFF</h4>
-                    </div>
-                </div>
-                <footer class="product-name">
-                    <h4><%= inOfferList.name %></h4>
-                </footer>
-            </article>
-        </section>
-        <% } %>
-    
-    </section>
-
-    <header class="main-title">
-        <h2>Todos los artículos</h2>
-    </header>
-
-    <section class="product-category">
-
-        <% for (i = 0 ; i < articles.length ; i++) { %>
-        <section class="product-product">
-            <div class="product-picture">
-                <img src="<%= articles[i].img %>">
-            </div>
-            <article class="product-article">
-                <div class="delivery-truck">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="price">
-                    <div class="full-price">
-                        <h3><%= articles[i].price %></h3>
-                    </div>
-                    <div class="discount">
-                        <% if (articles[i].discount != null) { %>
-                        <h4><%= articles[i].discount %> OFF</h4>
-                        <% } %>
-                    </div>
-                </div>
-                <footer class="product-name">
-                    <h4><%= articles[i].name %></h4>
-                </footer>
-            </article>
-        </section>
-        <% } %>
-
+            
     </section>
 
 </main>
