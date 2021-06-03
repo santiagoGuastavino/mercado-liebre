@@ -1,21 +1,19 @@
+let { readJson } = require('./helper');
+
+let articles = readJson('products.json');
+
+let visited = articles.filter(article => {
+    return article.category == 'visited';
+});
+
+let inSale = articles.filter(article => {
+    return article.category == 'in-sale';
+});
+
 let mainController = {
     home: (req,res) => {
         let title = 'Mercado Liebre';
-
-        // let relevantList = [];
-        // for (i = 0 ; i < articles.length ; i++) {
-        //     if (articles[i].relevant == true) {
-        //         relevantList.push(articles[i]);
-        //     };
-        // };
-        // let inOfferList = [];
-        // for (i = 0 ; i < articles.length ; i++) {
-        //     if (articles[i].inOffer == true) {
-        //         inOfferList.push(articles[i]);
-        //     };
-        // };
-
-        res.render('index',{title});
+        res.render('index',{title,visited,inSale});
     },
 
     search: (req,res) => {

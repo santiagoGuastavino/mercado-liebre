@@ -1,17 +1,75 @@
-<%- include('../partials/head') %>
-<%- include('../partials/header') %>
-
+<%- include ('../partials/head') %>
+<%- include ('../partials/header') %>
 <main class="main-main">
-
-    <form action="/">
+    <form action="/products" method="POST">
+        <!-- name -->
+        <!-- text -->
         <div class="input-box">
-            <label for=""></label>
-            <input type="text">
+            <label class="input-label" for="name">
+                Nombre del producto
+            </label>
+            <input class="input-text" type="text" name="name" id="name" placeholder="Cafetera Moulinex..." required>
         </div>
-
-
+        <!-- price -->
+        <!-- number -->
+        <div class="input-box">
+            <label class="input-label" for="price">
+                Precio
+            </label>
+            <input class="input-text" type="number" name="price" id="price" placeholer="9999" required>
+        </div>
+        <!-- discount -->
+        <!-- number -->
+        <div class="input-box">
+            <label class="input-label" for="discount">
+                Descuento (%)
+            </label>
+            <input class="input-text" type="number" name="discount" id="discount" placeholder="50" min="1" max="99" required>
+        </div>
+        <!-- category -->
+        <!-- radio -->
+        <div class="radio-box">
+            <label class="input-label">
+                Categoría:
+            </label>
+            <div class="user-profile-radio">
+                <input class="input-radio" type="radio" name="category" id="visited" value="visited" required>
+                <label class="option-label" for="visited">
+                    Vistos recientemente
+                </label>
+            </div>
+            <div class="user-profile-radio">
+                <input class="input-radio" type="radio" name="category" id="in-sale" value="in-sale" required>
+                <label class="option-label" for="in-sale">
+                    En oferta
+                </label>
+            </div>
+        </div>
+        <!-- description -->
+        <!-- textarea -->
+        <div class="input-box">
+            <label class="input-label" for="description">
+                Descripción del producto
+            </label>
+            <textarea class="input-text text-area-description" name="description" id="description" rows="5" required></textarea>
+        </div>
+        <!-- image -->
+        <!-- file -->
+        <div class="file-box">
+            <label class="input-label file-label" for="image">
+                Foto del producto
+                <input class="input-file" type="file" name="image" id="image" accept=".jpg, .png, .jpeg" required>
+            </label>
+        </div>
+        <!-- buttons -->
+        <div class="button-box">
+            <button class="form-button" id="send" type="submit">
+                Enviar
+            </button>
+            <button class="form-button" id="clear" type="reset">
+                Borrar
+            </button>
+        </div>
     </form>
-
 </main>
-
-<%- include('../partials/footer') %>
+<%- include ('../partials/footer') %>

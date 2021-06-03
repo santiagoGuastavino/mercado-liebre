@@ -1,0 +1,46 @@
+<%- include ('../partials/head') %>
+<%- include ('../partials/header') %>
+
+<main class="main-main">
+    <header class="main-title">
+        <h2>Detalle de producto</h2>
+    </header>
+
+    <!-- CREATE SINGLE PRODUCT -->
+    <section>
+
+    </section>
+
+    <article class="product-product">
+        <div class="product-picture">
+            <a href="/products/<%= article.id %>">
+                <img src="/img/products/<%= article.image %>">
+            </a>
+        </div>
+        <article class="product-article">
+            <div class="delivery-truck">
+                <i class="fas fa-truck"></i>
+            </div>
+            <div class="price">
+                <div class="full-price">
+                    <h3>
+                        $<%= article.price %>
+                    </h3>
+                </div>
+                <div class="discount">
+                <% if (article.discount != 0) { %>
+                <h4>
+                    <%= article.discount %>% OFF
+                </h4>
+                <% } %>
+            </div>
+            <footer class="product-name">
+                <h4>
+                    <%= article.name %>
+                </h4>
+            </footer>
+        </article>
+    </article>
+</main>
+
+<%- include ('../partials/footer') %>

@@ -1,12 +1,13 @@
 let express = require('express');
 let router = express.Router();
-// let controller
+let productController = require('../controllers/productController');
 
 // show all
-// router.get()
-
-// show one
-// get
+router.get('/', productController.index);
+// create one
+router.get('/create', productController.create);
+// show one // PUDE MOSTRAR /products/create porque aparece antes
+router.get('/:id', productController.show);
 
 // edit one
 // get
@@ -14,11 +15,9 @@ let router = express.Router();
 // update one
 // post
 
-// create one
-// get
 
 // store one
-// post
+router.post('/', productController.store);
 
 // delete
 // delete

@@ -1,8 +1,5 @@
-<%- include('./partials/head') %>
-
-<body>
-
-<%- include('./partials/header') %>
+<%- include ('./partials/head') %>
+<%- include ('./partials/header') %>
 
 <main class="main-main">
 
@@ -11,7 +8,9 @@
     </header>
     
     <section class="product-category">
-
+        <% for (i = 0 ; i < visited.length ; i++) { %>
+            <%- include ('./products/partials/product', { article:visited }) %>
+        <% } %>
     </section>
             
     <header class="main-title">
@@ -19,9 +18,11 @@
     </header>
     
     <section class="product-category">
-            
+        <% for (i = 0 ; i < inSale.length ; i++) { %>
+            <%- include ('./products/partials/product', { article:inSale }) %>
+        <% } %>
     </section>
 
 </main>
 
-<%- include('./partials/footer') %>
+<%- include ('./partials/footer') %>

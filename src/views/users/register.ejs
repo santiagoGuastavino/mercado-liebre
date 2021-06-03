@@ -1,154 +1,165 @@
-<%- include('../partials/head') %>
-
-<body>
-
-<%- include('../partials/header') %>
-
+<%- include ('../partials/head') %>
+<%- include ('../partials/header') %>
 <main class="main-main">
-    
     <form action="/register" method="POST">
-
-        <!-- Full name -->
+        <!-- fullName -->
         <!-- text -->
         <div class="input-box">
-            <label class="input-label" for="fullName">Nombre y apellido</label>
+            <label class="input-label" for="fullName">
+                Nombre y apellido
+            </label>
             <input class="input-text" type="text" name="fullName" id="fullName" placeholder="ej. Juan Pérez" required>
-            <!-- <span class="error">Por favor ingrese su nombre completo</span> -->
+            <!-- <span class="error">
+                Por favor ingrese su nombre completo
+            </span> -->
         </div>
-
-        <!-- Username -->
+        <!-- username -->
         <!-- text -->
         <div class="input-box">
-            <label class="input-label" for="userName">Nombre de usuario</label>
+            <label class="input-label" for="userName">
+                Nombre de usuario
+            </label>
             <input class="input-text" type="text" name="userName" id="userName" placeholder="username" required>
-            <!-- <span class="error">Éste nombre de usuario ya se encuentra en uso</span> -->
+            <!-- <span class="error">
+                Éste nombre de usuario ya se encuentra en uso
+            </span> -->
         </div>
-
-        <!-- E-mail -->
+        <!-- email -->
         <!-- email -->
         <div class="input-box">
-            <label class="input-label" for="email">E-mail</label>
+            <label class="input-label" for="email">
+                E-mail
+            </label>
             <input class="input-text" type="email" name="email" id="email" placeholder="ejemplo@correo.com" required>
-            <!-- <span class="error">Introudzca una dirección de correo electrónico válida</span> -->
+            <!-- <span class="error">
+                Introudzca una dirección de correo electrónico válida
+            </span> -->
         </div>
-
-        <!-- Birth date -->
+        <!-- birthDate -->
         <!-- date -->
         <div class="date-box">
-            <label class="input-label" for="birthDate">Fecha de nacimiento</label>
+            <label class="input-label" for="birthDate">
+                Fecha de nacimiento
+            </label>
             <input class="input-date" type="date" name="birthDate" id="birthDate" min="1921-5-25" max="2003-5-25" required>
-            <!-- <span class="error">Fecha de nacimiento inválida</span> -->
+            <!-- <span class="error">
+                Fecha de nacimiento inválida
+            </span> -->
         </div>
-
-
-        <!-- A IMPLEMENTAR -->
-        <!-- <div class="input-box">
-            <label class="input-label" for="adress">Domicilio</label>
-            <div class="location-selectors">
-                <div class="location-select">
-                    <label class="input-label" for="country">País</label>
-                    <select name="country" id="country">
-                        <option value="" disabled selected>Selccione país</option> -->
-                        <!-- <optgroup label=" -->
-                            
-                            <!-- </optgroup> -->
-                            <!-- </select>
-                            </div>
-                            <div class="location-select">
-                                <label class="input-label" for="">Provincia</label>
-                                <select name="" id="">
-                                    
-                                </select>
-                            </div>
-                            <div class="location-select">
-                                <label class="input-label" for="">Ciudad</label>
-                                <select name="" id="">
-                                    
-                                </select>
-                            </div>
-                            
-                            
-                            
-                            
-                        </div> -->
-                        
-                        
-        <!-- Adress -->
+        <!-- adress -->
         <!-- text -->
         <div class="input-box">
-            <label class="input-label" for="adress">Domicilio</label>
+            <label class="input-label" for="adress">
+                Domicilio
+            </label>
             <input class="input-text" type="text" name="adress" id="adress" placeholder="Ituzaingó 1377, 3ro B" required>
-            <!-- <span class="error">Por favor ingrese su domicilio</span> -->
+            <!-- <span class="error">
+                Por favor ingrese su domicilio
+            </span> -->
         </div>
-
-        <!-- User tpye -->
+        <!-- perfil -->
         <!-- radio -->
         <div class="radio-box">
-            <label class="input-label">Perfil de usuario</label>
+            <label class="input-label">
+                Perfil de usuario
+            </label>
             <div class="user-profile-radio">
-                <input class="input-radio" type="radio" name="perfil" id="comprador" value="comprador" required><label class="option-label" for="comprador">Comprador</label>
+                <input class="input-radio" type="radio" name="perfil" id="comprador" value="comprador" required>
+                <label class="option-label" for="comprador">
+                    Comprador
+                </label>
             </div>
             <div class="user-profile-radio">
-                <input class="input-radio" type="radio" name="perfil" id="vendedor" value="vendedor" required><label class="option-label" for="vendedor">Vendedor</label>
+                <input class="input-radio" type="radio" name="perfil" id="vendedor" value="vendedor" required>
+                <label class="option-label" for="vendedor">
+                    Vendedor
+                </label>
             </div>
-            <!-- <span class="error" id="radio">Seleccione una opción</span> -->
+            <!-- <span class="error" id="radio">
+                Seleccione una opción
+            </span> -->
         </div>
-        
-        <!-- Interest -->
+        <!-- interes -->
         <!-- checkbox -->
         <div class="check-box">
-            <label class="input-label">Interesado en:</label>
+            <label class="input-label">
+                Interesado en:
+            </label>
             <div class="interest-box">
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="electro" value="electro"><label class="option-label" for="electro">Electro</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="electro" value="electro">
+                    <label class="option-label" for="electro">
+                        Electro
+                    </label>
                 </div>
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="moda" value="moda"><label class="option-label" for="moda">Moda</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="moda" value="moda">
+                    <label class="option-label" for="moda">
+                        Moda
+                    </label>
                 </div>
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="hogar" value="hogar"><label class="option-label" for="hogar">Hogar</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="hogar" value="hogar">
+                    <label class="option-label" for="hogar">
+                        Hogar
+                    </label>
                 </div>
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="jugueteria" value="jugueteria"><label class="option-label" for="jugueteria">Juguetería</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="jugueteria" value="jugueteria">
+                    <label class="option-label" for="jugueteria">
+                        Juguetería
+                    </label>
                 </div>
                 <div>
-                    <input class="input-checkbox" type="checkbox" name="interes" id="vidaSana" value="vidaSana"><label class="option-label" for="vidaSana">Vida sana</label>
+                    <input class="input-checkbox" type="checkbox" name="interes" id="vidaSana" value="vidaSana">
+                    <label class="option-label" for="vidaSana">
+                        Vida sana
+                    </label>
                 </div>
             </div>
         </div>
-
-        <!-- Profile picture -->
+        <!-- fotoPerfil -->
         <!-- file -->
         <div class="file-box">
-            <label class="input-label" id="file-label" for="fotoPerfil">Añadir foto de perfil<input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil" accept=".jpg, .png"></label>
-            <!-- <span class="error">Debe seleccionar una imágen</span> -->
+            <label class="input-label file-label" for="fotoPerfil">
+                Añadir foto de perfil
+                <input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil" accept=".jpg, .png">
+            </label>
+            <!-- <span class="error">
+                Debe seleccionar una imágen
+            </span> -->
         </div>
-
-        <!-- Password -->
+        <!-- password -->
         <!-- password -->
         <div class="input-box">
-            <label class="input-label" for="password1">Contraseña</label>
+            <label class="input-label" for="password1">
+                Contraseña
+            </label>
             <input class="input-password" type="password" name="password1" id="password1" placeholder="********" required>
-            <!-- <span class="error">Debe incluir al menos un número y un caracter especial</span> -->
+            <!-- <span class="error">
+                Debe incluir al menos un número y un caracter especial
+            </span> -->
         </div>
-
-        <!-- Repeat password -->
+        <!-- password2 -->
         <!-- password -->
         <div class="input-box">
-            <label class="input-label" for="password2">Confirmar contraseña</label>
+            <label class="input-label" for="password2">
+                Confirmar contraseña
+            </label>
             <input class="input-password" type="password" name="password2" id="password2" placeholder="********" required>
-            <!-- <span class="error">Las contraseñas no coinciden</span> -->
+            <!-- <span class="error">
+                Las contraseñas no coinciden
+            </span> -->
         </div>
-
-        <!-- Submit/reset -->
         <!-- buttons -->
         <div class="button-box">
-            <button class="form-button" id="send" type="submit">Enviar</button>
-            <button class="form-button" id="clear" type="reset">Borrar</button>
+            <button class="form-button" id="send" type="submit">
+                Enviar
+            </button>
+            <button class="form-button" id="clear" type="reset">
+                Borrar
+            </button>
         </div>
-        
     </form>
- 
 </main>
-
-<%- include('../partials/footer') %>
+<%- include ('../partials/footer') %>

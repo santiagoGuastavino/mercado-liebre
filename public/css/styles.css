@@ -344,7 +344,7 @@ a:visited{
 }
 
 /* botón/etiqueta del send file */
-#file-label {
+.file-label {
     border: none;
     background-color: #fff;
     cursor: pointer;
@@ -354,7 +354,7 @@ a:visited{
     width: 160px;
 }
 
-#file-label:active {
+.file-label:active {
     background-color: #1259c3;
 }
 
@@ -381,22 +381,22 @@ a:visited{
     padding: 8px 10px;
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 80%);
-    transition: width .5s cubic-bezier(.25,.25,.25,.25);
+    transition: width .2s cubic-bezier(.25,.25,.25,.25);
 }
 
 .input-text:focus, .input-password:focus {
-    width: 40%;
+    width: 20%;
     outline-color: #1259c3;
 }
 
 /* los input del login */
 #login {
     width: 200px;
-    transition: width .5s cubic-bezier(.25,.25,.25,.25);
+    transition: width .2s cubic-bezier(.25,.25,.25,.25);
 }
 
 #login:focus {
-    width: 60%;
+    width: 20%;
     outline-color: #1259c3;
 }
 
@@ -451,6 +451,9 @@ a:visited{
     display: none;
 }
 
+.text-area-description {
+    resize: none;
+}
 
 /**/
 /* SPAN */

@@ -1,0 +1,18 @@
+<%- include ('../partials/head') %>
+<%- include ('../partials/header') %>
+
+<main class="main-main">
+    <header class="main-title">
+        <h2>Todos los productos</h2>
+    </header>
+
+    <section class="product-category">
+
+        <% for (i = 0 ; i < articles.length ; i++) { %>
+            <%- include('./partials/product', {article:articles}) %>
+        <% } %>
+                
+    </section>
+</main>
+
+<%- include ('../partials/footer') %>

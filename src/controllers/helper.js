@@ -12,14 +12,14 @@ let helper = {
 
     writeJson: (jsonName,data) => {
         dataFile = JSON.stringify(data, null, 2);
-        fs.writeFileSync(dataPath + '/' + jsonName + '.json', dataFile);
+        fs.writeFileSync(dataPath + '/' + jsonName, dataFile);
     },
 
     lastId: (data) => {
         let last = 0;
         data.forEach(item => {
             if (last < item.id) {
-                last = item.id + 1;
+                last = item.id;
             };
         });
         return last;

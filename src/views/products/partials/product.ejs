@@ -1,0 +1,30 @@
+<article class="product-product">
+    <div class="product-picture">
+        <a href="/products/<%= article[i].id %>">
+            <img src="/img/products/<%= article[i].image %>">
+        </a>
+    </div>
+    <article class="product-article">
+        <div class="delivery-truck">
+            <i class="fas fa-truck"></i>
+        </div>
+        <div class="price">
+            <div class="full-price">
+                <h3>
+                    $<%= article[i].price %>
+                </h3>
+            </div>
+            <div class="discount">
+            <% if (article[i].discount != 0) { %>
+            <h4>
+                <%= article[i].discount %>% OFF
+            </h4>
+            <% } %>
+        </div>
+        <footer class="product-name">
+            <h4>
+                <%= article[i].name %>
+            </h4>
+        </footer>
+    </article>
+</article>
