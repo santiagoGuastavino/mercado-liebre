@@ -1,7 +1,7 @@
 <%- include ('../partials/head') %>
 <%- include ('../partials/header') %>
 <main class="main-main">
-    <form action="/products" method="POST">
+    <form action="/products" method="POST" enctype="multipart/form-data">
         <!-- name -->
         <!-- text -->
         <div class="input-box">
@@ -24,9 +24,9 @@
             <label class="input-label" for="discount">
                 Descuento (%)
             </label>
-            <input class="input-text" type="number" name="discount" id="discount" placeholder="50" min="1" max="99" required>
+            <input class="input-text" type="number" name="discount" id="discount" placeholder="50" max="99">
         </div>
-        <!-- category -->
+        <!-- category -->   
         <!-- radio -->
         <div class="radio-box">
             <label class="input-label">
@@ -63,10 +63,10 @@
         </div>
         <!-- buttons -->
         <div class="button-box">
-            <button class="form-button" id="send" type="submit">
+            <button class="form-button send" type="submit">
                 Enviar
             </button>
-            <button class="form-button" id="clear" type="reset">
+            <button class="form-button clear" type="reset">
                 Borrar
             </button>
         </div>

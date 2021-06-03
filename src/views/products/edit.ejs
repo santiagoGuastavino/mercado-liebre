@@ -1,7 +1,7 @@
 <%- include ('../partials/head') %>
 <%- include ('../partials/header') %>
 <main class="main-main">
-    <form action="/products?_method=PUT" method="POST">
+    <form action="/products/edit/<%= article.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <!-- name -->
         <!-- text -->
         <div class="input-box">
@@ -62,15 +62,15 @@
         <div class="file-box">
             <label class="input-label file-label" for="image">
                 Foto del producto
-                <input class="input-file" type="file" name="image" id="image" accept=".jpg, .png, .jpeg">
+                <input class="input-file" type="file" name="image" id="image" value="<%= article.image %>" accept=".jpg, .png, .jpeg">
             </label>
         </div>
         <!-- buttons -->
         <div class="button-box">
-            <button class="form-button" id="send" type="submit">
+            <button class="form-button send" type="submit">
                 Enviar
             </button>
-            <button class="form-button" id="clear" type="reset">
+            <button class="form-button clear" type="reset">
                 Borrar
             </button>
         </div>

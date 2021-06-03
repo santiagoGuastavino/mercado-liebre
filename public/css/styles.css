@@ -165,6 +165,20 @@ a:visited{
     margin: 20px 0;
 }
 
+.product-index-title {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus-icon i {
+    font-size: 60px;
+    color: #1259c3;
+    cursor: pointer;
+    transition: color .2s cubic-bezier(.25,.25,.25,.25);
+}
+
 /* la gran sección */
 .product-category {
     display: flex;
@@ -253,7 +267,7 @@ a:visited{
     font-size: 2em;
     margin-top: 20px;
     margin-bottom: 10px;
-    transition: color .5s cubic-bezier(.25,.25,.25,.25);
+    transition: color .2s cubic-bezier(.25,.25,.25,.25);
 }
 
 /* título de cada sección */
@@ -319,7 +333,7 @@ a:visited{
     align-items: stretch;
 }
 
-#login-box {
+.login-box {
     text-align: center;
     position: relative;
 }
@@ -364,7 +378,7 @@ a:visited{
 }
 
 /* etiqueta del login */
-#login-label {
+.login-label {
     text-align: center;
 }
 
@@ -390,12 +404,12 @@ a:visited{
 }
 
 /* los input del login */
-#login {
+.login {
     width: 200px;
     transition: width .2s cubic-bezier(.25,.25,.25,.25);
 }
 
-#login:focus {
+.login:focus {
     width: 20%;
     outline-color: #1259c3;
 }
@@ -500,19 +514,19 @@ a:visited{
 
 /* BOTONES MÁS BIEN ESPECÍFICOS */
 /* send (enviar, aceptar) */
-#send, #send-login {
+.send, .send-login {
     background-color: #1259c3;
     color: #fff;
-    transition: all .5s cubic-bezier(.25,.25,.25,.25);
+    transition: all .2s cubic-bezier(.25,.25,.25,.25);
 }
 
 /* borrar */
-#clear {
-    transition: all .5s cubic-bezier(.25,.25,.25,.25);
+.clear {
+    transition: all .2s cubic-bezier(.25,.25,.25,.25);
 }
 
 /* botón del login */
-#send-login {
+.send-login {
     background-color: #1259c3;
     width: 200px;
 }
@@ -606,6 +620,10 @@ a:visited{
         padding: 0 50px;
     }
 
+    .plus-icon i:hover {
+        color: #C37C12;
+    }
+
 
     /**/
     /* FORMULARIOS */
@@ -613,13 +631,13 @@ a:visited{
 
 
     /* if hover: de botón send */
-    #send:hover, #send-login:hover {
+    .send:hover, .send-login:hover {
         color: black;
         background-color: #fff;
     }
     
     /* if hover: de botón borrar */
-    #clear:hover {
+    .clear:hover {
         background-color: red;
     }
 }

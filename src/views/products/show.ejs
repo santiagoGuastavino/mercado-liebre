@@ -1,6 +1,5 @@
 <%- include ('../partials/head') %>
 <%- include ('../partials/header') %>
-
 <main class="main-main">
     <header class="main-title">
         <h2>Detalle de producto</h2>
@@ -8,14 +7,13 @@
 
     <!-- CREATE SINGLE PRODUCT -->
     <section>
-
+        <!--  -->
     </section>
+    <!--  -->
 
     <article class="product-product">
         <div class="product-picture">
-            <a href="/products/<%= article.id %>">
-                <img src="/img/products/<%= article.image %>">
-            </a>
+            <img src="/img/products/<%= article.image %>">
         </div>
         <article class="product-article">
             <div class="delivery-truck">
@@ -41,6 +39,15 @@
             </footer>
         </article>
     </article>
+    <form action="/products/<%= article.id %>?_method=DELETE" method="POST">
+        <a href="/products/edit/<%= article.id %>">
+            <button class="form-button send" type="button">
+                Editar
+            </button>
+        </a>
+        <button class="form-button clear" type="submit">
+            Eliminar
+        </button>
+    </form>
 </main>
-
 <%- include ('../partials/footer') %>
