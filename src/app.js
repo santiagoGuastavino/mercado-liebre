@@ -1,10 +1,7 @@
 let express = require('express');
 let app = express();
 let path = require('path');
-
-let mainRouter = require('./routes/main');
-let userRouter = require('./routes/user');
-let productRouter = require('./routes/product');
+let methodOverride = require('method-override');
 
 let pathPublic = path.resolve('public');
 app.use(express.static(pathPublic));
@@ -15,6 +12,12 @@ app.set('views', viewsPath)
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+
+app.use(methodOverride('_method'));
+
+let mainRouter = require('./routes/main');
+let userRouter = require('./routes/user');
+let productRouter = require('./routes/product');
 
 app.use('/', mainRouter);
 app.use('/', userRouter);

@@ -23,7 +23,7 @@ let helper = {
             };
         });
         return last;
-    }
+    },
 };
 
 module.exports = helper;

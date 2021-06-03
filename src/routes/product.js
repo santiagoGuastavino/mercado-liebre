@@ -2,22 +2,14 @@ let express = require('express');
 let router = express.Router();
 let productController = require('../controllers/productController');
 
-// show all
-router.get('/', productController.index);
-// create one
-router.get('/create', productController.create);
-// show one // PUDE MOSTRAR /products/create porque aparece antes
-router.get('/:id', productController.show);
-
-// edit one
-// get
-
-// update one
-// post
+router.get('/', productController.index); // show all
+router.get('/create', productController.create); // create form
+router.post('/', productController.store); // from create form to db
+router.get('/edit/:id', productController.edit); // edit form w/ current data
+router.put('/', productController.update);
+router.get('/:id', productController.show); // show one
 
 
-// store one
-router.post('/', productController.store);
 
 // delete
 // delete

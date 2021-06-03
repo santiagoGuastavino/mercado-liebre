@@ -1,17 +1,14 @@
 let { readJson, writeJson, lastId } = require('./helper');
 let title = '';
-
 let articles = readJson('products.json');
 
 let productController = {
-    // index (view all items)
-    index: (req,res) => {
-        title = 'Todos los productos'
+    index: (req,res) => {   // show all
+        title = 'Todos los productos';
         res.render('products/product-index', {title,articles});
     },
 
-    // show (view one detail)
-    show: (req,res) => {
+    show: (req,res) => {    // show one
         let productId = req.params.id;
         articles.forEach(article => {
             if (productId == article.id) {
@@ -20,18 +17,28 @@ let productController = {
         });
     },
 
-    // edit (view current)
+    edit: (req,res) => {    // form w/ current data
+        title = 'Modificar producto';
+        let productId = req.params.id;
+        let article = articles.find(article => article.id == productId);
+        res.render('products/edit',{title,article});
+    },
+    
+    update: (req,res) => {  // put, from form to existing entry
+        article = {
+            ...req.body
+        }
+        articles.push(article);
+        writeJson('products.json',articles);
+        res.redirect('/products');
+    },  
 
-    // update (post put)
-
-    // create (view empty)
-    create: (req,res) => {
+    create: (req,res) => {  // create form
         title = 'Agregar producto';
         res.render('products/create', {title});
     },
 
-    // store (post)
-    store: (req,res) => {
+    store: (req,res) => {   // from create form to db
         let article = {
             id: lastId(articles) + 1,
             ...req.body,
@@ -39,7 +46,7 @@ let productController = {
         articles.push(article);
         writeJson('products.json',articles);
         res.redirect('/products');
-    },
+    },  
 };
 
 module.exports = productController;
