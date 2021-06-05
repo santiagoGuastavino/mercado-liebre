@@ -1,4 +1,4 @@
-let { readJson, writeJson, lastId } = require('./helper');
+let { readJson, writeJson, lastId, paramFinder } = require('./helper');
 let title = '';
 let articles = readJson('products.json');
 
@@ -9,9 +9,9 @@ let productController = {
     },
 
     show: (req,res) => {    // GET. show one
-        let productId = req.params.id;
+        paramFinder();
         articles.forEach(article => {
-            if (productId == article.id) {
+            if (param == article.id) {
                 res.render('products/show', {'title':article.name,article})
             };
         });
@@ -19,15 +19,15 @@ let productController = {
 
     edit: (req,res) => {    // GET. form w/ current data
         title = 'Modificar producto';
-        let productId = req.params.id;
+        paramFinder();
         let article = articles.find(article => article.id == productId);
         res.render('products/edit',{title,article});
     },
     
     update: (req,res) => {  // PUT. from form to existing entry
-        let productId = req.params.id;
+        paramFinder();
         articles.forEach(article => {
-            if (productId == article.id) {
+            if (param == article.id) {
                 article.name = req.body.name;
                 article.price = req.body.price;
                 article.discount = req.body.discount;
@@ -57,8 +57,8 @@ let productController = {
     },
 
     destroy: (req,res) => {     // DELETE. remove entry
-        let productId = req.params.id;
-        let newArticles = articles.filter(article => productId != article.id);
+        paramFinder();
+        let newArticles = articles.filter(article => param != article.id);
         writeJson('products.json',newArticles);
         res.redirect('/products');
     },

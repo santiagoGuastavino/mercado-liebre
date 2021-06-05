@@ -24,6 +24,11 @@ let helper = {
         });
         return last;
     },
+
+    paramFinder: () => {
+        let param = req.param.id
+        return param;
+    },
 };
 
 module.exports = helper;
