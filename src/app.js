@@ -24,3 +24,5 @@ app.use('/', userRouter);
 app.use('/products', productRouter);
 
 app.listen(process.env.PORT || 3001, () => console.log('Server running: 3001'));
+
+// 
