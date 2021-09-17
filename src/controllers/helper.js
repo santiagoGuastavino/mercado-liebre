@@ -1,6 +1,5 @@
 let fs = require('fs');
 let path = require('path');
-
 let dataPath = path.join(__dirname,'..','data');
 
 let helper = {
@@ -23,12 +22,7 @@ let helper = {
             };
         });
         return last;
-    },
-
-    paramFinder: () => {
-        let param = req.param.id
-        return param;
-    },
+    }
 };
 
 module.exports = helper;
