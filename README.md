@@ -1,4 +1,4 @@
-[Mercado Liebre](https://mercado-liebre-smg.herokuapp.com/):
+[Mercado Liebre](https://mercado-liebre-smg.herokuapp.com/)
 ---
 
 _This project is a mock-up of a well known argentine e-trading website: [Mercado Libre](https://www.mercadolibre.com.ar/)_
