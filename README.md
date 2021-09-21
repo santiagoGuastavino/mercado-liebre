@@ -1,8 +1,16 @@
 [Mercado Liebre](https://mercado-liebre-smg.herokuapp.com/):
 ---
-- This project is a mock-up of a well known argentine e-trading website: [Mercado Libre](https://www.mercadolibre.com.ar/).  
-- It was achieved by following steps provided by the [Coding Academy](https://www.digitalhouse.com/) I'm being tutored by.  
-- It has no functionality as of yet.  
-- I had a lot of fun writing it's code and I'm proud of the results.  
-- I think I might like front end a bit too much.  
-- I'm looking forward to make it operative with some back end.  
+
+_This project is a mock-up of a well known argentine e-trading website: [Mercado Libre](https://www.mercadolibre.com.ar/)_
+
+
+<h3>For this project I used:</h3>  
+
+- [Node.js](https://nodejs.org)  
+&nbsp;&nbsp; *[multer](https://www.npmjs.com/package/multer)*  
+&nbsp;&nbsp; *[method-override](https://www.npmjs.com/package/method-override)* 
+- [Express.js](https://expressjs.com/)  
+- [ejs template engine](https://ejs.co/)  
+- Model View Controller best practices
+
+This web app was developed following steps provided by the [Coding Academy](https://www.digitalhouse.com/) I was tutored by, and deployed to [Heroku](https://devcenter.heroku.com/start).
