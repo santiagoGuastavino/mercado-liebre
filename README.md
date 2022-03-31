@@ -1,7 +1,7 @@
 [Mercado Liebre](https://mercado-liebre-smg.herokuapp.com/)
 ---
 
-_This project is a mock-up of a well known argentine e-trading website: [Mercado Libre](https://www.mercadolibre.com.ar/)_
+_This project is a mock-up of a well known argentine e-commerce website: [Mercado Libre](https://www.mercadolibre.com.ar/)_
 
 
 <h3>For this project I used:</h3>  
