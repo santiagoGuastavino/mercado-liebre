@@ -1,19 +1,21 @@
-[Mercado Liebre](https://mercado-liebre-smg.herokuapp.com/)
+[Mercado Liebre]()
 ---
 
-_This project is a mock-up of a well known argentine e-commerce website: [Mercado Libre](https://www.mercadolibre.com.ar/)._
+This project is a mock-up of a the most famous argentine e-commerce website: [Mercado Libre](https://www.mercadolibre.com.ar/).  
+Developed for educational purposees and for fun's sake.  
+It was built with Node.js and Express.js with an MVC design and scaffolidng.  
 
+---
 
 <h3>For this project I used:</h3>  
 
 - [Node.js](https://nodejs.org)  
-    - [Express.js](https://expressjs.com/)
-    - [ejs template engine](https://ejs.co/)
-    - [method-override](https://www.npmjs.com/package/method-override)
-    - [multer](https://www.npmjs.com/package/multer)
-    - [countries-list](https://www.npmjs.com/package/countries-list)
-- Model View Controller best practices
+- [Express.js](https://expressjs.com/)
+- [ejs template engine](https://ejs.co/)
+- [method-override](https://www.npmjs.com/package/method-override)
+- [multer](https://www.npmjs.com/package/multer)
+- [countries-list](https://www.npmjs.com/package/countries-list)
 
 ---
 
-This web app was developed following steps provided by the [Coding Academy](https://www.digitalhouse.com/) I was tutored by, and deployed to [Heroku](https://devcenter.heroku.com/start).
+This MVC Web App has been deployed to [Render](https://render.com/).  
