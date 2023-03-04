@@ -34,7 +34,7 @@
             </label>
             <div class="user-profile-radio">
                 <input class="input-radio" type="radio" name="category" id="visited" value="visited" 
-                <%= article.category == 'visited' ? 'checked' : '' %>
+                <%= article.category === 'visited' ? 'checked' : '' %>
                 >
                 <label class="option-label" for="visited">
                     Vistos recientemente
@@ -42,7 +42,7 @@
             </div>
             <div class="user-profile-radio">
                 <input class="input-radio" type="radio" name="category" id="in-sale" value="in-sale" 
-                <%= article.category == 'in-sale' ? 'checked' : '' %>
+                <%= article.category === 'in-sale' ? 'checked' : '' %>
                 >
                 <label class="option-label" for="in-sale">
                     En oferta

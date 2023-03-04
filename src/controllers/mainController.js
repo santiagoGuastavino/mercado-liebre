@@ -1,30 +1,36 @@
-let { readJson } = require('./helper');
+const { readJson } = require('./helper')
 
-let mainController = {
-    home: (req,res) => {
-        let articles = readJson('products.json');
-        let visited = articles.filter(article => {
-            return article.category == 'visited';
-        });
-        let inSale = articles.filter(article => {
-            return article.category == 'in-sale';
-        });
-        res.render('index', {
-            title: 'Mercado Liebre',
-            visited,
-            inSale
-        });
-    },
+const mainController = {
+  home: (req, res) => {
+    const articles = readJson('products.json')
+    const visited = articles.filter(article => {
+      return article.category === 'visited'
+    })
+    const inSale = articles.filter(article => {
+      return article.category === 'in-sale'
+    })
+    res.render('index', {
+      title: 'Mercado Liebre',
+      visited,
+      inSale
+    })
+  },
 
-    search: (req,res) => {
-        let articles = readJson('products.json');
-        let searchResults = [];
-        let searchInput = req.query.search.toUpperCase();
-        res.render('./search-results', {
-            title: 'Resultados de búsqueda',
-            searchResults
-        });
-    }
-};
+  search: (req, res) => {
+    const articles = readJson('products.json')
+    const searchResults = []
+    const searchInput = req.query.search.toLocaleLowerCase()
+    articles.forEach((el) => {
+      const name = el.name.toLocaleLowerCase()
+      if (name.includes(searchInput)) {
+        searchResults.push(el)
+      }
+    })
+    res.render('./search-results', {
+      title: 'Resultados de búsqueda',
+      searchResults
+    })
+  }
+}
 
-module.exports = mainController;
+module.exports = mainController

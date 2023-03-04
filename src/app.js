@@ -1,28 +1,27 @@
-let express = require('express');
-let app = express();
-let path = require('path');
-let methodOverride = require('method-override');
+const express = require('express')
+const app = express()
+const path = require('path')
+const methodOverride = require('method-override')
 
-let pathPublic = path.resolve('public');
-app.use(express.static(pathPublic));
+const pathPublic = path.resolve('public')
+app.use(express.static(pathPublic))
 
-app.set('view engine','ejs');
-let viewsPath = path.resolve('./src/views')
+app.set('view engine', 'ejs')
+const viewsPath = path.resolve('./src/views')
 app.set('views', viewsPath)
 
-app.use(express.urlencoded({extended:false}));
-app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method'))
 
-let mainRouter = require('./routes/main');
-let userRouter = require('./routes/user');
-let productRouter = require('./routes/product');
+const mainRouter = require('./routes/main')
+const userRouter = require('./routes/user')
+const productRouter = require('./routes/product')
 
-app.use('/', mainRouter);
-app.use('/', userRouter);
-app.use('/products', productRouter);
+app.use('/', mainRouter)
+app.use('/', userRouter)
+app.use('/products', productRouter)
 
-app.listen(process.env.PORT || 3001, () => console.log('Server running: 3001'));
-
-// 
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => console.log(`Server running @ ${PORT}`))
