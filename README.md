@@ -7,7 +7,7 @@ It was built with Node.js and Express.js with an MVC design and scaffolidng.
 
 ---
 
-<h3>For this project I used:</h3>  
+#### Project dependencies:
 
 - [Node.js](https://nodejs.org)  
 - [Express.js](https://expressjs.com/)
