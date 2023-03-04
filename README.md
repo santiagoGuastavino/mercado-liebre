@@ -2,7 +2,7 @@
 ---
 
 This project is a mock-up of a the most famous argentine e-commerce website: [Mercado Libre](https://www.mercadolibre.com.ar/).  
-Developed for educational purposees and for fun's sake.  
+Developed for educational purposes and for fun's sake.  
 It was built with Node.js and Express.js with an MVC design and scaffolidng.  
 
 ---
